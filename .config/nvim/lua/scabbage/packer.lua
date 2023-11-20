@@ -29,6 +29,13 @@ return require('packer').startup(function(use)
       "neovim/nvim-lspconfig",
   }
 
+
+  use{
+      "L3MON4D3/LuaSnip",
+      tag = "v2.*",
+      run = "make install_jsregexp"
+  }
+
   use {
       "hrsh7th/nvim-cmp",
       requires = {
