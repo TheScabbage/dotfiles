@@ -2,15 +2,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(ev)
         local opts = { buffer = ev.buf }
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)           -- show docs
+        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts) -- rename
 
-        vim.keymap.set('n', 'pt', vim.lsp.buf.format, opts)
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-        vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, opts)
-        vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, opts)
-        vim.keymap.set('n', '<leader>dl', "<cmd>Telescope diagnostics<cr>", opts)
+        vim.keymap.set('n', 'pt', vim.lsp.buf.format, opts)         -- pretty
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)     -- go definition
+        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts) -- go implementation
+
+        vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, opts)         -- error next
+        vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev, opts)         -- error prev
+        vim.keymap.set('n', '<leader>ed', "<cmd>Telescope diagnostics<cr>", opts) -- error diagnostics
     end
 })
 
