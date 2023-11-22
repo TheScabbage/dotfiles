@@ -12,6 +12,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, opts)         -- error next
         vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev, opts)         -- error prev
         vim.keymap.set('n', '<leader>ed', "<cmd>Telescope diagnostics<cr>", opts) -- error diagnostics
+
+        -- Add border to hover box
+        vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+            border = "rounded",
+        })
     end
 })
 
@@ -88,3 +93,4 @@ lspcfg.rust_analyzer.setup { capabilities = capabilities }
 lspcfg.zls.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
 lspcfg.lua_ls.setup { capabilities = capabilities }
+
