@@ -2,12 +2,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(ev)
         local opts = { buffer = ev.buf }
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)           -- show docs
-        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts) -- rename
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)                         -- show docs
+        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)               -- rename
 
-        vim.keymap.set('n', 'pt', vim.lsp.buf.format, opts)         -- pretty
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)     -- go definition
-        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts) -- go implementation
+        vim.keymap.set('n', 'pt', vim.lsp.buf.format, opts)                       -- pretty
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)                   -- go definition
+        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)               -- go implementation
 
         vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, opts)         -- error next
         vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev, opts)         -- error prev
@@ -92,5 +92,24 @@ local lspcfg = require("lspconfig")
 lspcfg.rust_analyzer.setup { capabilities = capabilities }
 lspcfg.zls.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
-lspcfg.lua_ls.setup { capabilities = capabilities }
-
+lspcfg.lua_ls.setup { capabilities = capabilities,
+    settings = {
+        Lua = {
+            runtime = {
+                version = 'LuaJIT',
+            },
+            diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = {
+                    'vim',
+                    'require'
+                },
+            },
+            workspace = {
+                -- Make the server aware of Neovim runtime files
+                library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = { enable = false },
+        },
+    },
+}
