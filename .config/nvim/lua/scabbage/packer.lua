@@ -30,7 +30,6 @@ return require('packer').startup(function(use)
       "neovim/nvim-lspconfig",
   }
 
-
   use{
       "L3MON4D3/LuaSnip",
       tag = "v2.*",
@@ -54,5 +53,17 @@ return require('packer').startup(function(use)
       'declancm/cinnamon.nvim',
       config = function() require('cinnamon').setup() end
   }
+
+  use({
+      "jackMort/ChatGPT.nvim",
+      config = function()
+          require("chatgpt").setup()
+      end,
+      requires = {
+          "MunifTanjim/nui.nvim",
+          "nvim-lua/plenary.nvim",
+          "nvim-telescope/telescope.nvim"
+      }
+  })
 
 end)
