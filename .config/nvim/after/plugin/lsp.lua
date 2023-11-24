@@ -92,6 +92,7 @@ local lspcfg = require("lspconfig")
 lspcfg.rust_analyzer.setup { capabilities = capabilities }
 lspcfg.zls.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
+lspcfg.omnisharp.setup { capabilities = capabilities }
 lspcfg.lua_ls.setup { capabilities = capabilities,
     settings = {
         Lua = {
@@ -113,3 +114,4 @@ lspcfg.lua_ls.setup { capabilities = capabilities,
         },
     },
 }
+

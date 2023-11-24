@@ -4,8 +4,12 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  --use "bluz71/vim-nightfly-colors"
-  use 'jacoborus/tender.vim'
+
+  -- colour themes
+  use "bluz71/vim-nightfly-colors"
+  use "jacoborus/tender.vim"
+  use "rebelot/kanagawa.nvim"
+
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
 	  requires = { {'nvim-lua/plenary.nvim'} }
