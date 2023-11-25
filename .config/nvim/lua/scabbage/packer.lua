@@ -1,9 +1,14 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+local packer = require("packer")
+packer.init {
+    max_jobs = 1,
+}
+
+return packer.startup(function(use)
   -- Self-managed packer cuz he a clever boi
-  use 'wbthomason/packer.nvim'
+  use "wbthomason/packer.nvim"
 
   -- Colour themes
   use "bluz71/vim-nightfly-colors"
@@ -25,11 +30,16 @@ return require('packer').startup(function(use)
 	  end,
   }
 
-  use('nvim-treesitter/playground')
+  use "nvim-treesitter/playground"
 
   -- Git
-  use('tpope/vim-fugitive')
+  use "tpope/vim-fugitive"
 
+  use "ThePrimeagen/git-worktree.nvim"
+  use {
+      "nvim-lualine/lualine.nvim",
+      requires = { "nvim-tree/nvim-web-devicons", opt = true }
+  }
 
   -- LSP
   use {
@@ -56,12 +66,12 @@ return require('packer').startup(function(use)
   }
 
   -- TMUX
-  use {'christoomey/vim-tmux-navigator'}
+  use "christoomey/vim-tmux-navigator"
 
 
   -- Smooth scrolling
   use {
-      'declancm/cinnamon.nvim',
+      "declancm/cinnamon.nvim",
       config = function() require('cinnamon').setup() end
   }
 
