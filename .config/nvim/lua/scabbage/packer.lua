@@ -7,86 +7,93 @@ packer.init {
 }
 
 return packer.startup(function(use)
-  -- Self-managed packer cuz he a clever boi
-  use "wbthomason/packer.nvim"
+    -- Self-managed packer cuz he a clever boi
+    use "wbthomason/packer.nvim"
 
-  -- Colour themes
-  use "bluz71/vim-nightfly-colors"
-  use "jacoborus/tender.vim"
-  use "rebelot/kanagawa.nvim"
+    -- Colour themes
+    use "bluz71/vim-nightfly-colors"
+    use "jacoborus/tender.vim"
+    use "rebelot/kanagawa.nvim"
 
-  -- Telescope go brr
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    -- Telescope go brr
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
 
-  -- Syntax highlighting
-  use {
-	  'nvim-treesitter/nvim-treesitter',
-	  run = function()
-		  local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-		  ts_update()
-	  end,
-  }
+    -- Frecency
+    use {
+        "nvim-telescope/telescope-frecency.nvim",
+        config = function()
+            require("telescope").load_extension "frecency"
+        end,
+    }
 
-  use "nvim-treesitter/playground"
+    -- Syntax highlighting
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 
-  -- Git
-  use "tpope/vim-fugitive"
+    use "nvim-treesitter/playground"
 
-  use "ThePrimeagen/git-worktree.nvim"
-  use {
-      "nvim-lualine/lualine.nvim",
-      requires = { "nvim-tree/nvim-web-devicons", opt = true }
-  }
+    -- Git
+    use "tpope/vim-fugitive"
 
-  -- LSP
-  use {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
-  }
+    use "ThePrimeagen/git-worktree.nvim"
+    use {
+        "nvim-lualine/lualine.nvim",
+        requires = { "nvim-tree/nvim-web-devicons", opt = true }
+    }
 
-  -- Completion
-  use {
-      "hrsh7th/nvim-cmp",
-      requires = {
-          "hrsh7th/cmp-nvim-lsp",
-          "hrsh7th/cmp-buffer",
-          "hrsh7th/cmp-path",
-          "hrsh7th/cmp-cmdline"
-      }
-  }
+    -- LSP
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
 
-  use{
-      "L3MON4D3/LuaSnip",
-      tag = "v2.*",
-      run = "make install_jsregexp"
-  }
+    -- Completion
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline"
+        }
+    }
 
-  -- TMUX
-  use "christoomey/vim-tmux-navigator"
+    use {
+        "L3MON4D3/LuaSnip",
+        tag = "v2.*",
+        run = "make install_jsregexp"
+    }
 
-
-  -- Smooth scrolling
-  use {
-      "declancm/cinnamon.nvim",
-      config = function() require('cinnamon').setup() end
-  }
+    -- TMUX
+    use "christoomey/vim-tmux-navigator"
 
 
-  -- ChatGPT integration
-  use({
-      "jackMort/ChatGPT.nvim",
-      config = function()
-          require("chatgpt").setup()
-      end,
-      requires = {
-          "MunifTanjim/nui.nvim",
-          "nvim-lua/plenary.nvim",
-          "nvim-telescope/telescope.nvim"
-      }
-  })
+    -- Smooth scrolling
+    use {
+        "declancm/cinnamon.nvim",
+        config = function() require('cinnamon').setup() end
+    }
 
+
+    -- ChatGPT integration
+    use({
+        "jackMort/ChatGPT.nvim",
+        config = function()
+            require("chatgpt").setup()
+        end,
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
+    })
 end)
