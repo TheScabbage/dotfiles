@@ -22,4 +22,4 @@ vim.opt.signcolumn = "yes"
 vim.updatetime = "100"
 
 vim.g.mapleader = " "
-
+vim.opt.mouse = ""
