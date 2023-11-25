@@ -5,9 +5,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)                         -- show docs
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)               -- rename
 
-        vim.keymap.set('n', 'pt', vim.lsp.buf.format, opts)                       -- pretty
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)                   -- go definition
-        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)               -- go implementation
+        vim.keymap.set('n', '<leader>pt', vim.lsp.buf.format, opts)               -- pretty
+        vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, opts)           -- go definition
+        vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts)       -- go implementation
+        vim.keymap.set('n', '<leader>rf', vim.lsp.buf.references, opts)           -- references
 
         vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, opts)         -- error next
         vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev, opts)         -- error prev
