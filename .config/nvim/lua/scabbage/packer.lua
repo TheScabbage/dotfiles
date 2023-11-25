@@ -2,20 +2,21 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
+  -- Self-managed packer cuz he a clever boi
   use 'wbthomason/packer.nvim'
 
-  -- colour themes
+  -- Colour themes
   use "bluz71/vim-nightfly-colors"
   use "jacoborus/tender.vim"
   use "rebelot/kanagawa.nvim"
 
+  -- Telescope go brr
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-
+  -- Syntax highlighting
   use {
 	  'nvim-treesitter/nvim-treesitter',
 	  run = function()
@@ -26,20 +27,18 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/playground')
 
+  -- Git
   use('tpope/vim-fugitive')
 
+
+  -- LSP
   use {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
   }
 
-  use{
-      "L3MON4D3/LuaSnip",
-      tag = "v2.*",
-      run = "make install_jsregexp"
-  }
-
+  -- Completion
   use {
       "hrsh7th/nvim-cmp",
       requires = {
@@ -50,14 +49,24 @@ return require('packer').startup(function(use)
       }
   }
 
+  use{
+      "L3MON4D3/LuaSnip",
+      tag = "v2.*",
+      run = "make install_jsregexp"
+  }
 
+  -- TMUX
   use {'christoomey/vim-tmux-navigator'}
 
+
+  -- Smooth scrolling
   use {
       'declancm/cinnamon.nvim',
       config = function() require('cinnamon').setup() end
   }
 
+
+  -- ChatGPT integration
   use({
       "jackMort/ChatGPT.nvim",
       config = function()
