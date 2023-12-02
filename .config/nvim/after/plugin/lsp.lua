@@ -5,10 +5,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)                         -- show docs
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)               -- rename
 
-        vim.keymap.set('n', '<leader>pt', vim.lsp.buf.format, opts)               -- pretty
+        vim.keymap.set('n', '<leader>fmt', vim.lsp.buf.format, opts)              -- format
         vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, opts)           -- go definition
         vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts)       -- go implementation
         vim.keymap.set('n', '<leader>rf', vim.lsp.buf.references, opts)           -- references
+        vim.keymap.set('n', '<leader>sca', vim.lsp.buf.code_action, opts)         -- show code actions
 
         vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, opts)         -- error next
         vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev, opts)         -- error prev
@@ -94,6 +95,7 @@ lspcfg.rust_analyzer.setup { capabilities = capabilities }
 lspcfg.zls.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
 lspcfg.omnisharp.setup { capabilities = capabilities }
+lspcfg.arduino_language_server.setup { capabilities = capabilities }
 lspcfg.lua_ls.setup { capabilities = capabilities,
     settings = {
         Lua = {
@@ -115,4 +117,3 @@ lspcfg.lua_ls.setup { capabilities = capabilities,
         },
     },
 }
-
