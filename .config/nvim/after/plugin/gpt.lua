@@ -15,8 +15,8 @@ local cfg = {
         },
     },
     chat = {
-        welcome_message = WELCOME_MESSAGE,
-        loading_text = "Loading, please wait ...",
+        welcome_message = "Awaiting query...",
+        loading_text = "Loading...",
         question_sign = "", -- 🙂
         answer_sign = "ﮧ", -- 🤖
         max_line_length = 120,
@@ -127,7 +127,7 @@ local cfg = {
         },
     },
     openai_params = {
-        model = "gpt-3.5-turbo",
+        model = "luna-ai-llama2",
         frequency_penalty = 0,
         presence_penalty = 0,
         max_tokens = 300,
@@ -136,7 +136,7 @@ local cfg = {
         n = 1,
     },
     openai_edit_params = {
-        model = "gpt-3.5-turbo",
+        model = "luna-ai-llama2",
         frequency_penalty = 0,
         presence_penalty = 0,
         temperature = 0,
@@ -146,7 +146,19 @@ local cfg = {
     use_openai_functions_for_edits = false,
     actions_paths = {},
     show_quickfixes_cmd = "Trouble quickfix",
-    predefined_chat_gpt_prompts = "https://raw.githubusercontent.com/f/awesome-chatgpt-prompts/main/prompts.csv",
+    predefined_chat_gpt_prompts = "~/.config/nvim/prompt.txt",
 }
+
+function ShitGPT()
+    local Chat = require("chatgpt.flows.chat.base")
+
+    local chat = Chat:new()
+    chat:open()
+    chat.chat_window.border:set_text("top", "ShitGPT", "center")
+
+    chat:set_system_message("You are an assistant for an incompetent programmer. When they ask you a question, give them a terse (but helpful) response and insult them. Insults like 'retard', 'dumbass', 'fuckwit' are appropriate.")
+
+    chat:open_system_panel()
+end
 
 gpt.setup(cfg)
