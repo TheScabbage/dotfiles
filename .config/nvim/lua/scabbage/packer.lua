@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 
 local packer = require("packer")
 packer.init {
+    -- Gotta limit jobs otherwise they fail
     max_jobs = 1,
 }
 
@@ -13,6 +14,7 @@ return packer.startup(function(use)
     -- Colour themes
     use "bluz71/vim-nightfly-colors"
     use "jacoborus/tender.vim"
+    use 'Mofiqul/vscode.nvim'
     use "rebelot/kanagawa.nvim"
 
     -- Telescope go brr
@@ -56,6 +58,9 @@ return packer.startup(function(use)
         "neovim/nvim-lspconfig",
     }
 
+    -- Origami that shit
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
     -- Completion
     use {
         "hrsh7th/nvim-cmp",
@@ -66,7 +71,6 @@ return packer.startup(function(use)
             "hrsh7th/cmp-cmdline"
         }
     }
-
     use {
         "L3MON4D3/LuaSnip",
         tag = "v2.*",
@@ -75,7 +79,6 @@ return packer.startup(function(use)
 
     -- TMUX
     use "christoomey/vim-tmux-navigator"
-
 
     -- Smooth scrolling
     use {
