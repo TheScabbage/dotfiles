@@ -49,7 +49,7 @@ function Colorify(color)
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
     -- Change comment color to red
-    vim.cmd('highlight Comment ctermfg=red guifg=#ff0000')
+    vim.cmd('highlight Comment ctermfg=red guifg=#fc3a21')
 
 end
 

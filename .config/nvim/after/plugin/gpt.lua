@@ -127,7 +127,7 @@ local cfg = {
         },
     },
     openai_params = {
-        model = "luna-ai-llama2",
+        model = "gpt-3.5-turbo",
         frequency_penalty = 0,
         presence_penalty = 0,
         max_tokens = 300,
@@ -136,7 +136,7 @@ local cfg = {
         n = 1,
     },
     openai_edit_params = {
-        model = "luna-ai-llama2",
+        model = "gpt-3.5-turbo",
         frequency_penalty = 0,
         presence_penalty = 0,
         temperature = 0,
