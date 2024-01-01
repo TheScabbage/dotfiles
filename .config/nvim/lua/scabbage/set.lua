@@ -23,3 +23,5 @@ vim.updatetime = "100"
 
 vim.g.mapleader = " "
 vim.opt.mouse = ""
+
+vim.cmd('set ff=unix')

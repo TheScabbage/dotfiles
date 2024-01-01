@@ -1,5 +1,8 @@
 require('telescope').setup {
     defaults = {
+        file_ignore_patterns = {
+            "%.meta",
+        },
         vimgrep_arguments = {
             'rg',
             '--color=never',
