@@ -2,7 +2,7 @@
 vim.opt.listchars = {
     tab=">-",
     space="·",
-    trail="-"
+    trail="#"
 }
 
 vim.opt.list = true
