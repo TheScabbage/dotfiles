@@ -1,3 +1,12 @@
+#:set listchars=tab:>-,space:•,trail:.  
+vim.opt.listchars = {
+    tab=">-",
+    space="·",
+    trail="-"
+}
+
+vim.opt.list = true
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 

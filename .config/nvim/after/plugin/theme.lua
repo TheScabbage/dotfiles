@@ -51,6 +51,9 @@ function Colorify(color)
     -- Change comment color to red
     vim.cmd('highlight Comment ctermfg=red guifg=#fc3a21')
 
+    -- Make Whitespace chars not obnoxiously bright
+    vim.cmd('highlight Whitespace ctermfg=DarkGrey guifg=#181f28')
+
 end
 
 Colorify()
