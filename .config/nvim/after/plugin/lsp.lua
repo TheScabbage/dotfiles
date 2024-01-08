@@ -30,6 +30,7 @@ require('mason-lspconfig').setup {
         "arduino_language_server",
         "gopls",
         "zls",
+        "tsserver",
     }
 }
 
@@ -53,11 +54,13 @@ cmp.setup({
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-    }, {
-        { name = 'buffer' },
-    })
+            { name = 'nvim_lsp' },
+            { name = 'luasnip' },
+            { name = 'nvim_lsp_signature_help' }
+        },
+        {
+            { name = 'buffer' },
+        })
 })
 
 -- Set configuration for specific filetype.
@@ -96,6 +99,7 @@ lspcfg.zls.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
 lspcfg.omnisharp.setup { capabilities = capabilities }
 lspcfg.arduino_language_server.setup { capabilities = capabilities }
+lspcfg.tsserver.setup{capabilities = capabilities}
 lspcfg.lua_ls.setup { capabilities = capabilities,
     settings = {
         Lua = {
