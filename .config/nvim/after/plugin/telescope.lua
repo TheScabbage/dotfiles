@@ -2,6 +2,10 @@ require('telescope').setup {
     defaults = {
         file_ignore_patterns = {
             "%.meta",
+            "%.prefab",
+            "%.asset",
+            "%.blob",
+            "%.csproj"
         },
         vimgrep_arguments = {
             'rg',
