@@ -2,7 +2,9 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pf", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>fu", function() vim.cmd('set ff=unix') end)
 
+-- GPT
 vim.keymap.set("n", "<leader>gpt", vim.cmd.GpChatToggle)
+vim.keymap.set("n", "<leader>gpn", vim.cmd.GpChatNew)
 
 vim.keymap.set("n", "<leader>pl", vim.cmd.Gpush)
 
