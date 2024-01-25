@@ -1,9 +1,9 @@
 local wezterm = require 'wezterm'
 local config = {}
 
-config.color_scheme = 'Catppuccin Macchiato'
+config.color_scheme = 'Catppuccin Machiato'
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 
 config.window_background_gradient = {
     orientation = {
