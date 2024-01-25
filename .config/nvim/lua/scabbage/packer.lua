@@ -44,6 +44,7 @@ return packer.startup(function(use)
 
     -- Git
     use "tpope/vim-fugitive"
+    use "junegunn/gv.vim"
 
     use "ThePrimeagen/git-worktree.nvim"
     use {
@@ -59,7 +60,7 @@ return packer.startup(function(use)
     }
 
     -- Origami that shit
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
     -- Completion
     use {
@@ -88,15 +89,11 @@ return packer.startup(function(use)
 
 
     -- ChatGPT integration
+    -- packer.nvim
     use({
-        "jackMort/ChatGPT.nvim",
+        "robitx/gp.nvim",
         config = function()
-            require("chatgpt").setup()
+            require("gp").setup()
         end,
-        requires = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim"
-        }
     })
 end)
