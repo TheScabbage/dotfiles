@@ -32,4 +32,4 @@ vim.api.nvim_set_keymap('v', '<leader>yc', '"+y<CR>', { noremap = true, silent =
 vim.keymap.set("n", "<leader>rfs", ":set guifont=FiraCode\\ Nerd\\ Font\\ Mono:h16")
 
 -- Convert spaces to tabs
-vim.keymap.set("n", "<leader>tab", ":%retab!<CR>")
+vim.keymap.set("n", "<leader>tab", ":set noet<CR>:%retab!<CR>")
