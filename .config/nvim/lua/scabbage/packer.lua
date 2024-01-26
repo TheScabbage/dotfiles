@@ -42,6 +42,12 @@ return packer.startup(function(use)
 
     use "nvim-treesitter/playground"
 
+    -- Indentation detection
+    use {
+        'nmac427/guess-indent.nvim',
+        config = function() require('guess-indent').setup {} end,
+    }
+
     -- Git
     use "tpope/vim-fugitive"
     use "junegunn/gv.vim"
