@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local config = {}
 
-config.font_size = 16.0
+config.font_size = 18.0
 config.color_scheme = 'Catppuccin Machiato'
 
 config.window_background_opacity = 0.95
