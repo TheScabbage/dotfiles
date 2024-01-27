@@ -1,6 +1,13 @@
 vim.g.mapleader = " "
+
+-- Project files
 vim.keymap.set("n", "<leader>pf", vim.cmd.Ex)
+
+-- Line endings
 vim.keymap.set("n", "<leader>fu", function() vim.cmd('set ff=unix') end)
+
+-- Multiline string split
+vim.keymap.set("n", "<leader>ss", 'a" +<CR>"')
 
 -- GPT
 vim.keymap.set("n", "<leader>gpt", vim.cmd.GpChatToggle)
