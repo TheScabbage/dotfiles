@@ -1,12 +1,16 @@
 vim.g.mapleader = " "
 
--- Project files
+-- project files
 vim.keymap.set("n", "<leader>pf", vim.cmd.Ex)
 
--- Line endings
+-- convert line endings
 vim.keymap.set("n", "<leader>fu", function() vim.cmd('set ff=unix') end)
 
--- Multiline string split
+-- move lines up/down
+vim.keymap.set("n", "<C-Up>", "Vd<Up>P")
+vim.keymap.set("n", "<C-Down>", "Vdp")
+
+-- multi-line string split
 vim.keymap.set("n", "<leader>ss", 'a" +<CR>"')
 
 -- GPT
@@ -18,10 +22,12 @@ vim.api.nvim_set_keymap('n', '<leader>jt', [[<Cmd>normal! 'T<CR>]], {noremap = t
 vim.api.nvim_set_keymap('n', '<leader>jn', [[<Cmd>normal! 'N<CR>]], {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>js', [[<Cmd>normal! 'S<CR>]], {noremap = true})
 
--- Fugitive
+-- git fugitive
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
 vim.keymap.set("n", "<leader>gg", vim.cmd.Git);
-vim.keymap.set("n", "<leader>pl", vim.cmd.Gpush)
+
+vim.keymap.set("n", "<leader>pl", "<ESC>:Git pull")
+vim.keymap.set("n", "<leader>psh", "<ESC>:Git push")
 
 -- save my pinkies
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>',   { noremap = true, silent = true })
@@ -35,8 +41,8 @@ vim.api.nvim_set_keymap('n', '<leader>pc', '"+p<CR>', { noremap = true, silent =
 vim.api.nvim_set_keymap('n', '<leader>yc', '"+y<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>yc', '"+y<CR>', { noremap = true, silent = true })
 
--- Font reset
+-- reset font size
 vim.keymap.set("n", "<leader>rfs", ":set guifont=FiraCode\\ Nerd\\ Font\\ Mono:h16")
 
--- Convert spaces to tabs
+-- convert spaces to tabs
 vim.keymap.set("n", "<leader>tab", ":set noet<CR>:%retab!<CR>")
