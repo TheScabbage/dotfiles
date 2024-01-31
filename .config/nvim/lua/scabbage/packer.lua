@@ -1,7 +1,7 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-local packer = require("packer")
+local packer = require('packer')
 packer.init {
     -- Gotta limit jobs otherwise they fail
     max_jobs = 1,
@@ -9,13 +9,18 @@ packer.init {
 
 return packer.startup(function(use)
     -- Self-managed packer cuz he a clever boi
-    use "wbthomason/packer.nvim"
+    use 'wbthomason/packer.nvim'
 
     -- Colour themes
-    use "bluz71/vim-nightfly-colors"
-    use "jacoborus/tender.vim"
+    use 'bluz71/vim-nightfly-colors'
+    use 'jacoborus/tender.vim'
     use 'Mofiqul/vscode.nvim'
-    use "rebelot/kanagawa.nvim"
+    use 'rebelot/kanagawa.nvim'
+    use 'fcpg/vim-farout'
+    use 'w0ng/vim-hybrid'
+    use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter' })
+
+    use 'morhetz/gruvbox'
 
     -- Telescope go brr
     use {
@@ -25,9 +30,9 @@ return packer.startup(function(use)
 
     -- Frecency
     use {
-        "nvim-telescope/telescope-frecency.nvim",
+        'nvim-telescope/telescope-frecency.nvim',
         config = function()
-            require("telescope").load_extension "frecency"
+            require('telescope').load_extension 'frecency'
         end,
     }
 
@@ -40,7 +45,7 @@ return packer.startup(function(use)
         end,
     }
 
-    use "nvim-treesitter/playground"
+    use 'nvim-treesitter/playground'
 
     -- Indentation detection
     use {
@@ -49,20 +54,20 @@ return packer.startup(function(use)
     }
 
     -- Git
-    use "tpope/vim-fugitive"
-    use "junegunn/gv.vim"
+    use 'tpope/vim-fugitive'
+    use 'junegunn/gv.vim'
 
-    use "ThePrimeagen/git-worktree.nvim"
+    use 'ThePrimeagen/git-worktree.nvim'
     use {
-        "nvim-lualine/lualine.nvim",
-        requires = { "nvim-tree/nvim-web-devicons", opt = true }
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     -- LSP
     use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        'neovim/nvim-lspconfig',
     }
 
     -- Origami that shit
@@ -70,26 +75,26 @@ return packer.startup(function(use)
 
     -- Completion
     use {
-        "hrsh7th/nvim-cmp",
+        'hrsh7th/nvim-cmp',
         requires = {
-            "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-path",
-            "hrsh7th/cmp-cmdline"
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline'
         }
     }
     use {
-        "L3MON4D3/LuaSnip",
-        tag = "v2.*",
-        run = "make install_jsregexp"
+        'L3MON4D3/LuaSnip',
+        tag = 'v2.*',
+        run = 'make install_jsregexp'
     }
 
     -- TMUX
-    use "christoomey/vim-tmux-navigator"
+    use 'christoomey/vim-tmux-navigator'
 
     -- Smooth scrolling
     use {
-        "declancm/cinnamon.nvim",
+        'declancm/cinnamon.nvim',
         config = function() require('cinnamon').setup() end
     }
 
@@ -97,9 +102,9 @@ return packer.startup(function(use)
     -- ChatGPT integration
     -- packer.nvim
     use({
-        "robitx/gp.nvim",
+        'robitx/gp.nvim',
         config = function()
-            require("gp").setup()
+            require('gp').setup()
         end,
     })
 end)

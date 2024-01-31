@@ -42,7 +42,7 @@ ll.setup {
 }
 
 function Colorify(color)
-	color = color or "kanagawa"
+	color = color or "hybrid"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -52,7 +52,7 @@ function Colorify(color)
     vim.cmd('highlight Comment ctermfg=red guifg=#fc3a21')
 
     -- Make Whitespace chars not obnoxiously bright
-    vim.cmd('highlight Whitespace ctermfg=DarkGrey guifg=#181f28')
+    vim.cmd('highlight Whitespace guifg=#302922')
 
 end
 
