@@ -3,12 +3,16 @@ vim.g.mapleader = " "
 -- project files
 vim.keymap.set("n", "<leader>pf", vim.cmd.Ex)
 
--- convert line endings
-vim.keymap.set("n", "<leader>fu", function() vim.cmd('set ff=unix') end)
+-- convert line endings to unix
+vim.keymap.set("n", "<leader>leu", function() vim.cmd('set ff=unix') end)
 
 -- move lines up/down
 vim.keymap.set("n", "<C-Up>", "Vd<Up>P")
 vim.keymap.set("n", "<C-Down>", "Vdp")
+
+vim.keymap.set("i", "<C-Up>", "<Esc>Vd<Up>Pi")
+vim.keymap.set("i", "<C-Down>", "<Esc>Vdpi")
+
 vim.keymap.set("v", "<C-Up>", "d<Up>P`[V`]")
 vim.keymap.set("v", "<C-Down>", "dp`[V`]")
 
@@ -50,6 +54,10 @@ vim.keymap.set("n", "<leader>rfs", ":set guifont=FiraCode\\ Nerd\\ Font\\ Mono:h
 
 -- convert spaces to tabs
 vim.keymap.set("n", "<leader>tab", ":set noet<CR>:%retab!<CR>")
+
+-- fold up/out
+vim.keymap.set("n", "<leader>fu", "zc")
+vim.keymap.set("n", "<leader>fo", "zo")
 
 -- lsp stuff
 vim.keymap.set("n", "<leader>lspr", ":LspRestart<CR>")
