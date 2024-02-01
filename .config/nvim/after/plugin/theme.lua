@@ -49,11 +49,13 @@ function Colorify(color)
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
     -- Change comment color to red
-    vim.cmd('highlight Comment ctermfg=red guifg=#fc3a21')
+    vim.cmd('highlight Comment guifg=#fc3a21')
 
     -- Make Whitespace chars not obnoxiously bright
     vim.cmd('highlight Whitespace guifg=#302922')
 
+    -- Make matching parens less noisy
+    vim.cmd('highlight MatchParen guibg=#303030 guifg=#777777')
 end
 
 Colorify()
