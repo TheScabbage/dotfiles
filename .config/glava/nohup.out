@@ -1,0 +1,18 @@
+FPS: 167.38, UPS: 85.68
+FPS: 143.97, UPS: 85.98
+FPS: 143.97, UPS: 86.98
+FPS: 143.96, UPS: 84.98
+FPS: 143.97, UPS: 84.98
+FPS: 143.97, UPS: 85.98
+FPS: 143.97, UPS: 85.98
+FPS: 143.97, UPS: 85.98
+FPS: 143.97, UPS: 85.98
+FPS: 143.97, UPS: 85.98
+
+Interrupt recieved, closing...
+X connection to :0 broken (explicit kill or server shutdown).
+FPS: 149.83, UPS: 86.90
+FPS: 143.98, UPS: 85.99
+
+Interrupt recieved, closing...
+pulse_input.c: pa_simple_read() failed: Connection terminated
