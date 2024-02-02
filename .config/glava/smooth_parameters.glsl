@@ -34,12 +34,12 @@
 
 /* Factor used to scale frequencies. Lower values allows lower
    frequencies to occupy more space. */
-#define SAMPLE_SCALE 8
+#define SAMPLE_SCALE 2
 
 /* The frequency range to sample. 1.0 would be the entire FFT output,
    and lower values reduce the displayed frequencies in a log-like
    scale. */
-#define SAMPLE_RANGE 0.9
+#define SAMPLE_RANGE 0.85
 
 /* Factor for how to scale higher frequencies. Used in a linear equation
    which is multiplied by the result of the fft transformation. */

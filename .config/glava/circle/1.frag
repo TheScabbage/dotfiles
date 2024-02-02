@@ -29,10 +29,10 @@ out vec4 fragment;
 #define TWOPI 6.28318530718
 #define PI 3.14159265359
 
-#define LINES_THICKNESS 0.15
-#define LINES_COUNT 96
-#define SATURATION 0.6
-#define HUE_START 0.8
+#define LINES_THICKNESS 0.2
+#define LINES_COUNT 256
+#define SATURATION 0.8
+#define HUE_START 0.6
 #define HUE_RANGE 0.4
 
 /* This shader is based on radial.glsl, refer to it for more commentary */
@@ -46,6 +46,7 @@ float apply_smooth(float theta) {
         idx = -idx;
     
     float pos = abs(idx) / (PI + 0.001F);
+    pos *= 0.5;
     #define smooth_f(tex) smooth_audio(tex, audio_sz, pos)
     float v;
     if (idx > 0) v = smooth_f(audio_l);
@@ -62,6 +63,14 @@ vec3 hsv2rgb(vec3 c)
     return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
 }
 
+float arc(float x)
+{
+    x *= 2.0;
+    x -= 1;
+    x *= x;
+    return 1.0 - x;
+}
+
 void main() {
     fragment = vec4(0, 0, 0, 0);
     float
@@ -73,7 +82,10 @@ void main() {
     float
         adj0 = theta + adv,
         adj1 = theta - adv;
+
     d -= C_RADIUS;
+    float normRadius = d / float(C_LINE);
+
     if (d >= -(float(C_LINE) / 2.0F)) {
         float v = apply_smooth(theta);
         
@@ -96,23 +108,32 @@ void main() {
             float shift = fract(abs(theta + ROTATE) / 6.28318530718 * 0.25);
 
             fragment = (OUTLINE);
-            fragment.a *= sd;
+            //fragment.a *= sd;
 
             float ndy = dy / screen.y;
+            float normColumnAngle = 
+                clamp(
+                    abs(fract(theta * LINES_COUNT / TWOPI)),
+                    0.0,
+                    1.0);
+
             //fragment.rgb *= hsv2rgb(vec3(fract(0.6 + 0.3 * ndy), 0.8, 1.0));
-            fragment.rgb *= hsv2rgb(vec3(fract(HUE_START + HUE_RANGE * ndy), SATURATION, 1.0));
+            //fragment.rgb *= hsv2rgb(vec3(fract(HUE_START + HUE_RANGE * ndy), SATURATION, 1.0));
+            fragment.rgb *= hsv2rgb(
+                vec3(fract(HUE_START + HUE_RANGE * ndy),
+                SATURATION,
+                1.0));
 
-            //fragment.a *= smoothstep(0.25, 0.0, abs(ndy));
-            //fragment.a *= smoothstep(0.0, 0.2, abs(dx / screen.x));
-            //fragment.a += (d / (float(C_LINE) * 0.5));
-
-            fragment.a *= step(
+            float colTrans = arc(normColumnAngle);
+            fragment.a = smoothstep(
                 1.0 - LINES_THICKNESS,
-                abs(fract(theta * LINES_COUNT / 3.14159265359)));
-            //fragment.a *= abs(fract(theta * 64 / 3.14159265359)));
-
+                1.0,
+                colTrans * colTrans);
             if (d < -v)
                 fragment.a = d / -v;
         }
+
     }
+    
+    //fragment.a = normRadius;
 }

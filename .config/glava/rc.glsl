@@ -19,7 +19,7 @@
 #request setfloating  false
 #request setdecorated true
 #request setfocused   false
-#request setmaximized false
+#request setmaximized true
 
 /* Set window background opacity mode. Possible values are:
    
@@ -111,7 +111,7 @@
 /* Buffer swap interval (vsync), set to '0' to prevent
    waiting for refresh, '1' (or more) to wait for the specified
    amount of frames. */
-#request setswap 1
+#request setswap 0
 
 /* Linear interpolation for audio data frames. Drastically
    improves smoothness with configurations that yield low UPS
@@ -127,11 +127,11 @@
    
    This will delay data output by one update frame, so it can
    desync audio with visual effects on low UPS configs. */
-#request setinterpolate true
+#request setinterpolate false
 
 /* Frame limiter, set to the frames per second (FPS) desired or
    simply set to zero (or lower) to disable the frame limiter. */
-#request setframerate 0
+#request setframerate 72
 
 /* Suspends rendering if a fullscreen window is focused while
    GLava is still visible (ie. on another monitor). This prevents
@@ -148,7 +148,7 @@
    by pulseaudio, and require transformations to be re-applied
    (thus being a good measure of how much work your CPU has to
    perform over time) */
-#request setprintframes true
+#request setprintframes false
 
 /* PulseAudio sample buffer size. Lower values result in more
    frequent audio updates (also depends on sampling rate), but
@@ -177,7 +177,7 @@
    smooth the data, as accuracy beyond this setting is mostly
    meaningless for visual purposes.
 */
-#request setsamplesize 1024
+#request setsamplesize 2048
 
 /* Audio buffer size to be used for processing and shaders. 
    Increasing this value can have the effect of adding 'gravity'
@@ -186,7 +186,7 @@
 
    This value has a _massive_ effect on FFT performance and
    quality for some modules. */
-#request setbufsize 4096
+#request setbufsize 2048
 
 /* PulseAudio sample rate. Lower values can add 'gravity' to
    FFT output, but can also reduce accuracy. Most hardware
