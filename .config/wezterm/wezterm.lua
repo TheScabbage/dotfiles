@@ -1,16 +1,18 @@
-local wezterm = require 'wezterm'
 local config = {}
+local wezterm = require 'wezterm'
 
 config.font_size = 17.0
 -- config.color_scheme = 'Catppuccin Machiato'
 config.color_scheme = 'Hybrid'
 
-config.window_background_opacity = 0.9
+config.default_cursor_style = 'BlinkingBar'
+
+config.window_background_opacity = 0.80
 
 -- config.window_background_gradient = {
 --     orientation = {
---         Radial = {
 --             cx = 1.0,
+--         Radial = {
 --             cy = 0.8,
 --             radius = 0.8,
 --         }
