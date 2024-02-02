@@ -40,6 +40,8 @@ vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>',     { noremap = true, silent
 vim.api.nvim_set_keymap('n', '<leader>q', ':q',         { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>on', ':on<CR>',   { noremap = true, silent = true })
 
+-- clear line
+vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>S',   { noremap = true, silent = true })
 
 -- squirly brace
 vim.api.nvim_set_keymap('n', '<leader>sb', 'o{<CR>}<ESC>O', { noremap = true, silent = true })
