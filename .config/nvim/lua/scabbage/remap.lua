@@ -7,14 +7,14 @@ vim.keymap.set("n", "<leader>pf", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>leu", function() vim.cmd('set ff=unix') end)
 
 -- move lines up/down
-vim.keymap.set("n", "<C-Up>", "Vd<Up>P")
-vim.keymap.set("n", "<C-Down>", "Vdp")
+vim.keymap.set("n", "<C-Up>", 'V"ayV"_d<Up>"aP')
+vim.keymap.set("n", "<C-Down>", 'V"ayV"_d"ap')
 
-vim.keymap.set("i", "<C-Up>", "<Esc>Vd<Up>Pi")
-vim.keymap.set("i", "<C-Down>", "<Esc>Vdpi")
+vim.keymap.set("i", "<C-Up>", '<Esc>V"ayV"_d<Up>"aPi')
+vim.keymap.set("i", "<C-Down>", '<Esc>V"ayV"_d"api')
 
-vim.keymap.set("v", "<C-Up>", "d<Up>P`[V`]")
-vim.keymap.set("v", "<C-Down>", "dp`[V`]")
+vim.keymap.set("v", "<C-Up>",   '"ay"_d<Up>"aP`[V`]')
+vim.keymap.set("v", "<C-Down>", '"ay"_d"ap`[V`]')
 
 -- multi-line string split
 vim.keymap.set("n", "<leader>ss", 'a" +<CR>"')
