@@ -13,8 +13,14 @@ vim.keymap.set("n", "<C-Down>", 'V"ayV"_d"ap')
 vim.keymap.set("i", "<C-Up>", '<Esc>V"ayV"_d<Up>"aPi')
 vim.keymap.set("i", "<C-Down>", '<Esc>V"ayV"_d"api')
 
-vim.keymap.set("v", "<C-Up>",   '"ay"_d<Up>"aP`[V`]')
-vim.keymap.set("v", "<C-Down>", '"ay"_d"ap`[V`]')
+vim.keymap.set("v", "<C-Up>",   '"aygv"_d<Up>"aP`[V`]')
+vim.keymap.set("v", "<C-Down>", '"aygv"_d"ap`[V`]')
+
+-- make braces
+vim.keymap.set("n", "<leader>bc", 'i()<Left>')
+
+-- make stringy boi
+vim.keymap.set("n", "<leader>str", 'a""<Left>')
 
 -- multi-line string split
 vim.keymap.set("n", "<leader>ss", 'a" +<CR>"')
@@ -47,9 +53,12 @@ vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>S',   { noremap = true, silent = tru
 vim.api.nvim_set_keymap('n', '<leader>sb', 'o{<CR>}<ESC>O', { noremap = true, silent = true })
 
 -- system clipboard
-vim.api.nvim_set_keymap('n', '<leader>pc', '"+p<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>yc', '"+y<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<leader>yc', '"+y<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>pc', '"+p<CR>', { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>pc', '"+p<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>yc', '"+y<CR>', { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>yc', '"+y<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ya', 'mYggVG"+y<CR>\'Y', { noremap = true, silent = true })
 
 -- reset font size
 vim.keymap.set("n", "<leader>rfs", ":set guifont=FiraCode\\ Nerd\\ Font\\ Mono:h16")
