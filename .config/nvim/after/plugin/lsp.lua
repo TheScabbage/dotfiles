@@ -97,7 +97,6 @@ local lspcfg = require("lspconfig")
 lspcfg.rust_analyzer.setup { capabilities = capabilities }
 lspcfg.zls.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
-lspcfg.omnisharp.setup { capabilities = capabilities }
 lspcfg.arduino_language_server.setup { capabilities = capabilities }
 lspcfg.tsserver.setup { capabilities = capabilities }
 lspcfg.lua_ls.setup { capabilities = capabilities,
@@ -120,4 +119,10 @@ lspcfg.lua_ls.setup { capabilities = capabilities,
             telemetry = { enable = false },
         },
     },
+}
+
+lspcfg.omnisharp.setup {
+    capabilities = capabilities,
+    enable_ms_build_load_projects_on_demand = true,
+    enable_roslyn_analyzers = true,
 }
