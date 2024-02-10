@@ -1,4 +1,6 @@
-require('telescope').setup {
+local telescope = require('telescope')
+
+telescope.setup {
     defaults = {
         file_ignore_patterns = {
             "%.meta",
@@ -17,9 +19,18 @@ require('telescope').setup {
             '--smart-case',
             '--ignore-file',
             '.gitignore'
+        },
+        extensions = {
+            ["ui-select"] = {
+                require('telescope.themes').get_dropdown {
+
+                }
+            }
         }
     }
 }
+
+telescope.load_extension("ui-select")
 
 local builtin = require('telescope.builtin')
 
