@@ -34,12 +34,8 @@ vim.api.nvim_set_keymap('n', '<leader>jt', [[<Cmd>normal! 'T<CR>]], { noremap = 
 vim.api.nvim_set_keymap('n', '<leader>jn', [[<Cmd>normal! 'N<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>js', [[<Cmd>normal! 'S<CR>]], { noremap = true })
 
--- git fugitive
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
-vim.keymap.set("n", "<leader>gg", vim.cmd.Git);
-
-vim.keymap.set("n", "<leader>pl", "<ESC>:Git pull")
-vim.keymap.set("n", "<leader>psh", "<ESC>:Git push")
+-- git
+vim.keymap.set("n", "<leader>lg", ':LazyGit<CR>');
 
 -- save my pinkies
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>',     { noremap = true, silent = true })

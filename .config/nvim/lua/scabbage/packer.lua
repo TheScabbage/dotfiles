@@ -19,13 +19,13 @@ return packer.startup(function(use)
     use 'fcpg/vim-farout'
     use 'w0ng/vim-hybrid'
     use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter' })
-
     use 'morhetz/gruvbox'
 
     -- Telescope go brr
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         'nvim-telescope/telescope-ui-select.nvim',
+
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
@@ -64,11 +64,24 @@ return packer.startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    -- Lazygit
+    use({
+        "kdheepak/lazygit.nvim",
+        requires = {
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/plenary.nvim",
+        },
+        config = function()
+            require("telescope").load_extension("lazygit")
+        end,
+    })
+
     -- LSP
     use {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
+        'Hoffs/omnisharp-extended-lsp.nvim'
     }
 
     -- Origami that shit
