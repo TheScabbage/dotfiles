@@ -34,6 +34,9 @@ vim.api.nvim_set_keymap('n', '<leader>jt', [[<Cmd>normal! 'T<CR>]], { noremap = 
 vim.api.nvim_set_keymap('n', '<leader>jn', [[<Cmd>normal! 'N<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>js', [[<Cmd>normal! 'S<CR>]], { noremap = true })
 
+-- case insensitive search
+vim.keymap.set("n", "<leader>/", "/\\c")
+
 -- git
 vim.keymap.set("n", "<leader>lg", ':LazyGit<CR>');
 
