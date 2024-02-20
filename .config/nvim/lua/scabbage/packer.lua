@@ -83,6 +83,8 @@ return packer.startup(function(use)
         'neovim/nvim-lspconfig',
         'Hoffs/omnisharp-extended-lsp.nvim'
     }
+    -- ew java
+    use 'mfussenegger/nvim-jdtls'
 
     -- Origami that shit
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
@@ -111,7 +113,6 @@ return packer.startup(function(use)
         'declancm/cinnamon.nvim',
         config = function() require('cinnamon').setup() end
     }
-
 
     -- ChatGPT integration
     -- packer.nvim

@@ -99,6 +99,7 @@ lspcfg.zls.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
 lspcfg.arduino_language_server.setup { capabilities = capabilities }
 lspcfg.tsserver.setup { capabilities = capabilities }
+lspcfg.jdtls.setup { capabilities = capabilities }
 lspcfg.lua_ls.setup { capabilities = capabilities,
     settings = {
         Lua = {
