@@ -21,4 +21,4 @@
 #request setgravitystep 4.0
 
 /* Smoothing factor, override from `smooth_parameters.glsl` */
-#request setsmoothfactor 0.02
+#request setsmoothfactor 0.008
