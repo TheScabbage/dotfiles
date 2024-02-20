@@ -121,4 +121,7 @@ return packer.startup(function(use)
             require('gp').setup()
         end,
     })
+
+    -- Stop being shit
+    use 'ja-ford/delaytrain.nvim'
 end)
