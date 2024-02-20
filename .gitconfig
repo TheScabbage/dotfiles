@@ -14,3 +14,5 @@
 	ui = auto
 [branch]
 	sort = -committerdate
+[maintenance]
+	repo = /home/scabbage/projects/dust
