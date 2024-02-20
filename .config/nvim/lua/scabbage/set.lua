@@ -5,6 +5,9 @@ vim.opt.listchars = {
     trail="#"
 }
 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 vim.opt.list = true
 
 vim.opt.nu = true
