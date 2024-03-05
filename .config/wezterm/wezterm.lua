@@ -6,7 +6,7 @@ config.font_size = 17.0
 config.color_scheme = 'Hybrid'
 
 config.default_cursor_style = 'BlinkingBar'
-
+config.window_decorations = 'RESIZE'
 config.window_background_opacity = 0.80
 
 -- config.window_background_gradient = {
