@@ -18,3 +18,5 @@
 	repo = /home/scabbage/projects/dust
 [rerere]
 	enabled = true
+[fetch]
+	writeCommitGraph = true
