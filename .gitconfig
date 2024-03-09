@@ -16,3 +16,5 @@
 	sort = -committerdate
 [maintenance]
 	repo = /home/scabbage/projects/dust
+[rerere]
+	enabled = true
