@@ -9,6 +9,8 @@ config.default_cursor_style = 'BlinkingBar'
 config.window_decorations = 'RESIZE'
 config.window_background_opacity = 0.80
 
+config.enable_tab_bar = false
+
 -- config.window_background_gradient = {
 --     orientation = {
 --             cx = 1.0,
