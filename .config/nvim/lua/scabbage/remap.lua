@@ -29,6 +29,7 @@ vim.keymap.set("n", "<leader>ss", 'a" +<CR>"')
 vim.keymap.set("n", "<leader>gpt", vim.cmd.GpChatToggle)
 vim.keymap.set("n", "<leader>gpn", vim.cmd.GpChatNew)
 
+-- jumping around global marks
 vim.api.nvim_set_keymap('n', '<leader>jh', [[<Cmd>normal! 'H<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>jt', [[<Cmd>normal! 'T<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>jn', [[<Cmd>normal! 'N<CR>]], { noremap = true })
