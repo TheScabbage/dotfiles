@@ -72,3 +72,6 @@ vim.keymap.set("n", "<leader>fo", "zo")
 -- lsp stuff
 vim.keymap.set("n", "<leader>lspr", ":LspRestart<CR>")
 vim.keymap.set("n", "<leader>lspi", ":LspInfo<CR>")
+
+-- find highlight groups
+vim.keymap.set("n", "<leader>hl", ":Inspect<CR>")
