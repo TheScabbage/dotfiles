@@ -1,11 +1,11 @@
 local ll = require("lualine")
 
 ll.setup {
-    options = {
+  options = {
     icons_enabled = true,
     theme = 'vscode',
-    component_separators = { left = '', right =''},
-    section_separators = { left = '', right = ''},
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -20,18 +20,18 @@ ll.setup {
     }
   },
   sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch', 'diff', 'diagnostics' },
+    lualine_c = { 'filename' },
+    lualine_x = { 'encoding', 'fileformat', 'filetype' },
+    lualine_y = { 'progress' },
+    lualine_z = { 'location' }
   },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
+    lualine_c = { 'filename' },
+    lualine_x = { 'location' },
     lualine_y = {},
     lualine_z = {}
   },
@@ -42,20 +42,21 @@ ll.setup {
 }
 
 function Colorify(color)
-	color = color or "hybrid"
-	vim.cmd.colorscheme(color)
+  color = color or "evergarden"
+  vim.cmd.colorscheme(color)
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
-    -- Change comment color to red
-    vim.cmd('highlight Comment guifg=#fc3a21')
+  -- Change comment color to red
+  vim.cmd('highlight Comment guifg=#bb4033')
+  vim.cmd('highlight @comment guifg=#bb4033')
 
-    -- Make Whitespace chars not obnoxiously bright
-    vim.cmd('highlight Whitespace guifg=#302922')
+  -- Make Whitespace chars not obnoxiously bright
+  vim.cmd('highlight Whitespace guifg=#302922')
 
-    -- Make matching parens less noisy
-    vim.cmd('highlight MatchParen guibg=#303030 guifg=#777777')
+  -- Make matching parens less noisy
+  vim.cmd('highlight MatchParen guibg=#303030 guifg=#777777')
 end
 
 Colorify()

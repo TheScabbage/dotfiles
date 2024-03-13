@@ -18,6 +18,7 @@ return packer.startup(function(use)
     use 'rebelot/kanagawa.nvim'
     use 'fcpg/vim-farout'
     use 'w0ng/vim-hybrid'
+    use 'comfysage/evergarden'
     use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter' })
     use 'morhetz/gruvbox'
 
