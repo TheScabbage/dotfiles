@@ -1,9 +1,10 @@
 local config = {}
 local wezterm = require 'wezterm'
 
-config.font_size = 17.0
+config.font_size = 15.0
 -- config.color_scheme = 'Catppuccin Machiato'
 config.color_scheme = 'Hybrid'
+-- config.color_scheme = 'Everforest Dark (Gogh)'
 
 config.default_cursor_style = 'BlinkingBar'
 config.window_decorations = 'RESIZE'
