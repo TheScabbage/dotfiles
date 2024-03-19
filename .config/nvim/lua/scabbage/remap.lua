@@ -20,7 +20,7 @@ vim.keymap.set("v", "<C-Down>", '"aygv"_d"ap`[V`]')
 vim.keymap.set("n", "<leader>bc", 'i()<Left>')
 
 -- squirly brace
-vim.api.nvim_set_keymap('n', '<leader>sb', 'o{<CR>}<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>sb', 'A{<CR>}<ESC>O', { noremap = true, silent = true })
 
 -- make stringy boi
 vim.keymap.set("n", "<leader>str", 'a""<Left>')
