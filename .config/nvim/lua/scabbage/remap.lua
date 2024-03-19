@@ -19,6 +19,9 @@ vim.keymap.set("v", "<C-Down>", '"aygv"_d"ap`[V`]')
 -- make braces
 vim.keymap.set("n", "<leader>bc", 'i()<Left>')
 
+-- squirly brace
+vim.api.nvim_set_keymap('n', '<leader>sb', 'o{<CR>}<ESC>O', { noremap = true, silent = true })
+
 -- make stringy boi
 vim.keymap.set("n", "<leader>str", 'a""<Left>')
 
@@ -49,8 +52,6 @@ vim.api.nvim_set_keymap('n', '<leader>on', ':on<CR>',   { noremap = true, silent
 -- clear line
 vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>S',   { noremap = true, silent = true })
 
--- squirly brace
-vim.api.nvim_set_keymap('n', '<leader>sb', 'o{<CR>}<ESC>O', { noremap = true, silent = true })
 
 -- system clipboard
 vim.keymap.set('n', '<leader>pc', '"+p<CR>', { noremap = true, silent = true })
