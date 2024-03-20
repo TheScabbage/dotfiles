@@ -95,7 +95,11 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspcfg = require("lspconfig")
 
 lspcfg.rust_analyzer.setup { capabilities = capabilities }
+
+-- Disable autoformatting in Zig
+vim.g.zig_fmt_autosave = 0
 lspcfg.zls.setup { capabilities = capabilities }
+
 lspcfg.gopls.setup { capabilities = capabilities }
 lspcfg.arduino_language_server.setup { capabilities = capabilities }
 lspcfg.tsserver.setup { capabilities = capabilities }
