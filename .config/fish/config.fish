@@ -33,7 +33,6 @@ end
 
 if status is-interactive
     echo -e "\e[38;5;69m$time"
-    #echo -e "\e[38;5;141mGreetings, $user\e[38;5;110m."
     
     if test (random 0 20) -eq 8
         cat (printf "/home/%s/.config/fish/art%s.txt" $USER (random 0 1))
