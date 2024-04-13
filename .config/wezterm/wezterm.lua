@@ -1,29 +1,29 @@
-local config = {}
+local cfg = {}
 local wezterm = require 'wezterm'
 
-config.font_size = 15.0
--- config.color_scheme = 'Catppuccin Machiato'
-config.color_scheme = 'Hybrid'
--- config.color_scheme = 'Everforest Dark (Gogh)'
+cfg.font = wezterm.font_with_fallback { 'Fira Code', 'Helvetica Neue LT Std' }
+cfg.font_size = 16.0
 
-config.default_cursor_style = 'BlinkingBar'
-config.window_decorations = 'RESIZE'
-config.window_background_opacity = 0.80
+cfg.color_scheme = 'Hybrid'
 
-config.enable_tab_bar = false
+cfg.default_cursor_style = 'BlinkingBar'
+cfg.window_decorations = 'RESIZE'
+cfg.window_background_opacity = 0.8
 
--- config.window_background_gradient = {
---     orientation = {
---             cx = 1.0,
---         Radial = {
---             cy = 0.8,
---             radius = 0.8,
---         }
---     },
---     colors = {
---         '#100610',
---         '#030208',
---     },
--- }
+cfg.enable_tab_bar = false
 
-return config
+cfg.window_background_gradient = {
+    orientation = {
+        Radial = {
+            cx = 1.0,
+            cy = 0.8,
+            radius = 0.8,
+        }
+    },
+    colors = {
+        '#100610',
+        '#030208',
+    },
+}
+
+return cfg
