@@ -75,7 +75,7 @@ void main() {
     fragment = vec4(0, 0, 0, 0);
     float
         dx = gl_FragCoord.x - (screen.x / 2) - 357,
-        dy = gl_FragCoord.y + 30 - (screen.y / 2) + 6;
+        dy = gl_FragCoord.y + 30 - (screen.y / 2);
     float theta = atan(dy, dx);
     float d = sqrt((dx * dx) + (dy * dy));
     float adv = (1.0F / d) * (C_LINE * 0.5);
@@ -88,10 +88,10 @@ void main() {
 
     if (d >= -(float(C_LINE) / 2.0F)) {
         float v = apply_smooth(theta);
-        
+
         adj0 = apply_smooth(adj0) - v;
         adj1 = apply_smooth(adj1) - v;
-        
+
         float
             dmax = max(adj0, adj1),
             dmin = min(adj0, adj1);
