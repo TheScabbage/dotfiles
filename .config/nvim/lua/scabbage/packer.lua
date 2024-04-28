@@ -126,4 +126,7 @@ return packer.startup(function(use)
 
     -- Stop being shit
     use 'ja-ford/delaytrain.nvim'
+
+    -- Colour the chungus lines
+    use 'whatyouhide/vim-lengthmatters'
 end)
