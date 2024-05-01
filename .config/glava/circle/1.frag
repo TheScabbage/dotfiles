@@ -74,8 +74,8 @@ float arc(float x)
 void main() {
     fragment = vec4(0, 0, 0, 0);
     float
-        dx = gl_FragCoord.x - (screen.x / 2),
-        dy = gl_FragCoord.y - (screen.y / 2);
+        dx = gl_FragCoord.x - (screen.x / 2) - CENTER_OFFSET_X,
+        dy = gl_FragCoord.y - (screen.y / 2) - CENTER_OFFSET_Y;
     float theta = atan(dy, dx);
     float d = sqrt((dx * dx) + (dy * dy));
     float adv = (1.0F / d) * (C_LINE * 0.5);

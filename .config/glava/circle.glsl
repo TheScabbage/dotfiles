@@ -1,3 +1,7 @@
+/* Offset (Y) of the visualization */
+#define CENTER_OFFSET_Y -5
+/* Offset (X) of the visualization */
+#define CENTER_OFFSET_X 357
 /* center radius (pixels) */
 #define C_RADIUS 350
 /* center line thickness (pixels) */
