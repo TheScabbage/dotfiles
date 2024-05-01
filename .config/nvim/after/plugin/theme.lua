@@ -57,6 +57,9 @@ function Colorify(color)
 
   -- Make matching parens less noisy
   vim.cmd('highlight MatchParen guibg=#303030 guifg=#777777')
+
+  -- Set background colour of long lines to dark red
+  vim.cmd("call lengthmatters#highlight('guibg=#440000')")
 end
 
 Colorify()
