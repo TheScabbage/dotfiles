@@ -80,3 +80,6 @@ vim.keymap.set("n", "<leader>hl", ":Inspect<CR>")
 
 -- autoindent entire file
 vim.keymap.set('n', '<leader>ind', 'gg=G<C-o>zz')
+
+-- toggle delay training
+vim.keymap.set('n', '<leader>dt', ':DelayTrainToggle<CR>');
