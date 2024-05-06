@@ -51,6 +51,9 @@ return packer.startup(function(use)
         config = function() require('guess-indent').setup {} end,
     }
 
+    -- Surround
+    use 'tpope/vim-surround'
+
     -- Git
     use 'tpope/vim-fugitive'
     use 'junegunn/gv.vim'
