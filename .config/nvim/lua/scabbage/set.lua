@@ -43,3 +43,4 @@ vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
 
 vim.opt.clipboard = "unnamed"
 
+vim.opt.textwidth = 100;
