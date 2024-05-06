@@ -2,10 +2,6 @@
 vim.cmd [[packadd packer.nvim]]
 
 local packer = require('packer')
-packer.init {
-    -- Gotta limit jobs otherwise they fail
-    max_jobs = 1,
-}
 
 return packer.startup(function(use)
     -- Self-managed packer cuz he a clever boi
