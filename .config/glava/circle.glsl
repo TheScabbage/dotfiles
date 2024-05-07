@@ -1,3 +1,6 @@
+#define HUE_START 0.75
+#define HUE_RANGE 0.5
+
 /* Offset (Y) of the visualization */
 #define CENTER_OFFSET_Y -5
 /* Offset (X) of the visualization */
@@ -9,7 +12,7 @@
 #define OUTLINE #80fbff
 #define C_LINE 4
 /* Amplify magnitude of the results each bar displays */
-#define AMPLIFY 150
+#define AMPLIFY 300
 /* Angle (in radians) for how much to rotate the visualizer */
 #define ROTATE (PI / 2)
 /* Whether to switch left/right audio buffers */

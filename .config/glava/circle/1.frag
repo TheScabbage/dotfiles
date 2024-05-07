@@ -32,8 +32,6 @@ out vec4 fragment;
 #define LINES_THICKNESS 0.2
 #define LINES_COUNT 256
 #define SATURATION 0.8
-#define HUE_START 0.6
-#define HUE_RANGE 0.4
 
 /* This shader is based on radial.glsl, refer to it for more commentary */
 
