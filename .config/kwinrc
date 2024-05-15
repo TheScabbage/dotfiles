@@ -27,31 +27,49 @@ WobblynessLevel=4
 [Plugins]
 blurEnabled=true
 contrastEnabled=true
-minimizeallEnabled=true
+desktopchangeosdEnabled=false
+minimizeallEnabled=false
 synchronizeskipswitcherEnabled=true
+tilegapsEnabled=false
+virtual-desktops-only-on-primaryEnabled=false
 wobblywindowsEnabled=true
 
+[Script-tilegaps]
+gapLeft=22
+gapMid=15
+includeMaximized=true
+panelLeft=true
+
+[SubSession: 242c4f56-178e-4387-927c-38d63326a721]
+active=-1
+count=0
+
 [TabBox]
-LayoutName=compact
 MultiScreenMode=1
 
 [Tiling]
-padding=4
+padding=10
+
+[Tiling][04febcfd-8137-5838-a431-c9be0d90e11c]
+tiles={"layoutDirection":"horizontal","tiles":[{"layoutDirection":"vertical","tiles":[{"height":0.3527777777777778},{"height":0.6472222222222221}],"width":0.296875},{"width":0.7031249999999991}]}
 
 [Tiling][06844bd2-3766-581a-b686-14616bc25b11]
 tiles={"layoutDirection":"floating","tiles":[]}
 
 [Tiling][1128db9a-0b25-5afd-8c9b-67d34443078e]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.6880208333333334},{"layoutDirection":"vertical","tiles":[{"height":0.4287037037037037},{"height":0.5712962962962961}],"width":0.3119791666666666}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"layoutDirection":"vertical","tiles":[{"height":0.6768518518518519},{"height":0.3231481481481481}],"width":0.34375},{"width":0.6562499999999996}]}
+
+[Tiling][39bff801-ee7a-5f89-977e-d552a939c47e]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][3bce9750-cb37-51d9-9293-3c64dacfc9f7]
-tiles={"layoutDirection":"horizontal","tiles":[{"layoutDirection":"vertical","tiles":[{"height":0.3861111111111111},{"height":0.6138888888888889}],"width":0.26406250000000003},{"width":0.7359374999999986}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.37447916666666664},{"width":0.6255208333333333}]}
 
 [Tiling][41f0c1f9-1e18-5500-8f4b-5a70afe9d069]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.6770833333333333},{"layoutDirection":"vertical","tiles":[{"height":0.437037037037037},{"height":0.5629629629629621}],"width":0.32291666666666674}]}
 
 [Tiling][46a69001-85da-5288-a261-f9f36b4b1fc3]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
 [Tiling][4fec7728-b4b4-5547-b9a4-a1ed367104d3]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -60,22 +78,28 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6ab16c87-1fda-5b91-b472-5e7fcd32f457]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.4125},{"width":0.5875}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"layoutDirection":"vertical","tiles":[{"height":0.40370370370370373},{"height":0.5962962962962963}],"width":0.2567708333333332},{"width":0.7432291666666668}]}
 
 [Tiling][8eba8c3c-91ed-555a-8375-71befa0bb6de]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5739583333333333},{"width":0.4260416666666662}]}
 
 [Tiling][9e698e58-9018-536e-b412-48b0d08b1232]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5328125},{"width":0.4671875}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"layoutDirection":"vertical","tiles":[{"height":0.3768518518518519},{"height":0.6231481481481481}],"width":0.25624999999999953},{"width":0.7437500000000002}]}
 
 [Tiling][acccfdee-9b58-5d47-a45a-384d2601e10c]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.24583333333333335},{"width":0.7541666666666665}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.4885416666666667},{"width":0.5114583333333333}]}
 
 [Tiling][b540b9e7-387a-543d-9f2f-976c26442a6d]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Windows]
+BorderSnapZone=32
+WindowSnapZone=16
+
 [Xwayland]
 Scale=1
+XwaylandEavesdrops=Modifiers
 
 [org.kde.kdecoration2]
-theme=__aurorae__svg__Sweet-ambar-blue
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__One-Dark-Blue
