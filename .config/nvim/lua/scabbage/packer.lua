@@ -128,4 +128,12 @@ return packer.startup(function(use)
 
     -- Colour the chungus lines
     use 'whatyouhide/vim-lengthmatters'
+
+    -- File tree
+    use({
+        "stevearc/oil.nvim",
+        config = function()
+            require("oil").setup()
+        end,
+    })
 end)

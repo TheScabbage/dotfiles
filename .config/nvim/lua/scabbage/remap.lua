@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- project files
-vim.keymap.set("n", "<leader>pf", ":Ex<CR>:set number<CR>")
+vim.keymap.set("n", "<leader>pf", ":Oil<CR>")
 
 -- convert line endings to unix
 vim.keymap.set("n", "<leader>leu", function() vim.cmd('set ff=unix') end)
