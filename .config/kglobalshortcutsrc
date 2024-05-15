@@ -1,6 +1,5 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
-switch-to-activity-242c4f56-178e-4387-927c-38d63326a721=none,none,Switch to activity "Activity 2"
 switch-to-activity-f266c3d2-4845-4f2b-ae52-d17111e4ec75=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -21,7 +20,7 @@ _k_friendly_name=Accessibility
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
-Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
+Toggle Touchpad=Touchpad Toggle,Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Toggle Touchpad
 _k_friendly_name=Touchpad
 
 [kded5]
@@ -39,7 +38,7 @@ decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Decreas
 decrease_volume=Volume Down,Volume Down,Decrease Volume
 increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume
 increase_volume=Volume Up,Volume Up,Increase Volume
-mic_mute=Meta+.\tMicrophone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
+mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
 
 [ksmserver]
@@ -52,15 +51,15 @@ _k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Activate Window Demanding Attention
-Decrease Opacity=none,,Decrease Opacity of Active Window by 5%
+Decrease Opacity=Meta+V,,Decrease Opacity of Active Window by 5%
 Edit Tiles=Meta+T,Meta+T,Toggle Tiles Editor
 Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
 ExposeAll=Meta+F,Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
 ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
 ExposeClassCurrentDesktop=none,none,Toggle Present Windows (Window class on current desktop)
-Increase Opacity=none,,Increase Opacity of Active Window by 5%
+Increase Opacity=Meta+Z,,Increase Opacity of Active Window by 5%
 Kill Window=Meta+Shift+Q,Meta+Ctrl+Esc,Kill Window
-MinimizeAll=Meta+D,none,MinimizeAll
+MinimizeAll=none,none,MinimizeAll
 Move Tablet to Next Output=none,none,Move the tablet to the next output
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
@@ -75,8 +74,8 @@ ShowDesktopGrid=Meta+F8,Meta+F8,Show Desktop Grid
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=none,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=none,Meta+Ctrl+Up,Switch One Desktop Up
-Switch One Desktop to the Left=none,Meta+Ctrl+Left,Switch One Desktop to the Left
-Switch One Desktop to the Right=none,Meta+Ctrl+Right,Switch One Desktop to the Right
+Switch One Desktop to the Left=Meta+O,Meta+Ctrl+Left,Switch One Desktop to the Left
+Switch One Desktop to the Right=Meta+E,Meta+Ctrl+Right,Switch One Desktop to the Right
 Switch Window Down=Meta+Down,Meta+Alt+Down,Switch to Window Below
 Switch Window Left=Meta+Left,Meta+Alt+Left,Switch to Window to the Left
 Switch Window Right=Meta+Right,Meta+Alt+Right,Switch to Window to the Right
@@ -117,14 +116,15 @@ Switch to Screen Above=none,,Switch to Screen Above
 Switch to Screen Below=none,,Switch to Screen Below
 Switch to Screen to the Left=none,,Switch to Screen to the Left
 Switch to Screen to the Right=none,,Switch to Screen to the Right
+Toggle=none,none,Toggle Show Paint
 Toggle Night Color=none,none,Toggle Night Color
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
 Walk Through Desktop List=none,,Walk Through Desktop List
 Walk Through Desktop List (Reverse)=none,,Walk Through Desktop List (Reverse)
 Walk Through Desktops=none,,Walk Through Desktops
 Walk Through Desktops (Reverse)=none,,Walk Through Desktops (Reverse)
-Walk Through Windows=Meta+P,Alt+Tab,Walk Through Windows
-Walk Through Windows (Reverse)=Meta+Y,Alt+Shift+Backtab,Walk Through Windows (Reverse)
+Walk Through Windows=Meta+.,Alt+Tab,Walk Through Windows
+Walk Through Windows (Reverse)=Meta+\\,,Alt+Shift+Backtab,Walk Through Windows (Reverse)
 Walk Through Windows Alternative=none,,Walk Through Windows Alternative
 Walk Through Windows Alternative (Reverse)=none,,Walk Through Windows Alternative (Reverse)
 Walk Through Windows of Current Application=Meta+`,Alt+`,Walk Through Windows of Current Application
@@ -145,7 +145,7 @@ Window Minimize=Meta+I,Meta+PgDown,Minimize Window
 Window Move=none,,Move Window
 Window Move Center=none,,Move Window to the Center
 Window No Border=none,,Toggle Window Titlebar and Frame
-Window On All Desktops=none,,Keep Window on All Desktops
+Window On All Desktops=Meta+P,,Keep Window on All Desktops
 Window One Desktop Down=Meta+Ctrl+Shift+Down,Meta+Ctrl+Shift+Down,Window One Desktop Down
 Window One Desktop Up=Meta+Ctrl+Shift+Up,Meta+Ctrl+Shift+Up,Window One Desktop Up
 Window One Desktop to the Left=Meta+Ctrl+Shift+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left
@@ -168,7 +168,7 @@ Window Quick Tile Top=none,Meta+Up,Quick Tile Window to the Top
 Window Quick Tile Top Left=none,,Quick Tile Window to the Top Left
 Window Quick Tile Top Right=none,,Quick Tile Window to the Top Right
 Window Raise=none,,Raise Window
-Window Resize=none,,Resize Window
+Window Resize=Meta+',,Resize Window
 Window Shade=none,,Shade Window
 Window Shrink Horizontal=none,,Shrink Window Horizontally
 Window Shrink Vertical=none,,Shrink Window Vertically
@@ -206,7 +206,7 @@ Window to Screen 6=none,,Window to Screen 6
 Window to Screen 7=none,,Window to Screen 7
 _k_friendly_name=KWin
 view_actual_size=Meta+0,Meta+0,Zoom to Actual Size
-view_zoom_in=Meta++\tMeta+=,Meta++\tMeta+=,Zoom In
+view_zoom_in=Meta+;,Meta++\tMeta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
@@ -222,7 +222,7 @@ stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin
-_launch=Meta+E,Meta+E,Dolphin
+_launch=none,Meta+E,Dolphin
 
 [org.kde.kcalc.desktop]
 _k_friendly_name=KCalc
@@ -279,6 +279,8 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 25=Alt+F1,none,Activate Application Dashboard Widget
+activate widget 83=none,none,Activate Digital Clock Widget
+activate widget 86=none,none,Activate Icons-only Task Manager Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -286,12 +288,12 @@ cycleNextAction=none,,Next History Item
 cyclePrevAction=none,,Previous History Item
 edit_clipboard=none,,Edit Contents…
 manage activities=none,Meta+Q,Show Activity Switcher
-next activity=Meta+Tab,none,Walk through activities
-previous activity=Meta+Shift+Tab,none,Walk through activities (Reverse)
+next activity=Meta+Tab,Meta+Tab,Walk through activities
+previous activity=Meta+Shift+Tab,Meta+Shift+Tab,Walk through activities (Reverse)
 repeat_action=Meta+Ctrl+R,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
 show-barcode=none,,Show Barcode…
-show-on-mouse-pos=Meta+V,Meta+V,Show Items at Mouse Position
+show-on-mouse-pos=none,Meta+V,Show Items at Mouse Position
 stop current activity=Meta+S,Meta+S,Stop Current Activity
 switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity

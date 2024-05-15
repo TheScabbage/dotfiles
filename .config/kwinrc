@@ -14,19 +14,24 @@ Rows=1
 [Effect-blur]
 NoiseStrength=9
 
+[Effect-kwin4_effect_scale]
+Duration=100
+InScale=0.9
+OutScale=0.1
+
 [Effect-kwin4_effect_translucency]
 Inactive=93
 
 [Effect-wobblywindows]
 AdvancedMode=true
-Drag=75
-MoveFactor=21
-Stiffness=4
+Drag=68
+MoveFactor=24
+Stiffness=7
 WobblynessLevel=4
 
 [Plugins]
-blurEnabled=true
-contrastEnabled=true
+blurEnabled=false
+contrastEnabled=false
 desktopchangeosdEnabled=false
 minimizeallEnabled=false
 synchronizeskipswitcherEnabled=true
