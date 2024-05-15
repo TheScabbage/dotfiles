@@ -8,7 +8,7 @@ cfg.color_scheme = 'Hybrid'
 
 cfg.default_cursor_style = 'BlinkingBar'
 cfg.window_decorations = 'RESIZE'
-cfg.window_background_opacity = 0.5
+cfg.window_background_opacity = 0.2
 
 cfg.enable_tab_bar = false
 
