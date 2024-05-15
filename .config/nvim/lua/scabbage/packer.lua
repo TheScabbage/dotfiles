@@ -114,15 +114,6 @@ return packer.startup(function(use)
         config = function() require('cinnamon').setup() end
     }
 
-    -- ChatGPT integration
-    -- packer.nvim
-    use({
-        'robitx/gp.nvim',
-        config = function()
-            require('gp').setup()
-        end,
-    })
-
     -- Stop being shit
     use 'ja-ford/delaytrain.nvim'
 
