@@ -110,7 +110,7 @@ return packer.startup(function(use)
 
     -- Smooth scrolling
     use {
-        'declancm/cinnamon.nvim',
+        'TheScabbage/cinnamon.nvim',
         config = function() require('cinnamon').setup() end
     }
 
