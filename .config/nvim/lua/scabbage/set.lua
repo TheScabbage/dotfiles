@@ -1,4 +1,8 @@
-#:set listchars=tab:>-,space:•,trail:.  
+vim.o.guifont = "FiraCode\\ Nerd\\ Font\\ Mono:h16"
+vim.g.neovide_transparency = 0.2
+vim.opt.termguicolors = true
+
+-- set listchars=tab:>-,space:•,trail:.
 vim.opt.listchars = {
     tab=">-",
     space="·",
