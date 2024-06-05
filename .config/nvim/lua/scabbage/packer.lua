@@ -81,7 +81,8 @@ return packer.startup(function(use)
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
-        'Hoffs/omnisharp-extended-lsp.nvim'
+        'Hoffs/omnisharp-extended-lsp.nvim',
+        'simrat39/rust-tools.nvim',
     }
     -- ew java
     use 'mfussenegger/nvim-jdtls'
