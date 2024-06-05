@@ -121,10 +121,5 @@ return packer.startup(function(use)
     use 'whatyouhide/vim-lengthmatters'
 
     -- File tree
-    use({
-        "stevearc/oil.nvim",
-        config = function()
-            require("oil").setup()
-        end,
-    })
+    use "stevearc/oil.nvim"
 end)
