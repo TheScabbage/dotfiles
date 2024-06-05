@@ -84,6 +84,7 @@ return packer.startup(function(use)
         'Hoffs/omnisharp-extended-lsp.nvim',
         'simrat39/rust-tools.nvim',
     }
+
     -- ew java
     use 'mfussenegger/nvim-jdtls'
 
