@@ -100,6 +100,7 @@ lspcfg.rust_analyzer.setup { capabilities = capabilities }
 vim.g.zig_fmt_autosave = 0
 lspcfg.zls.setup { capabilities = capabilities }
 
+lspcfg.rust_analyzer.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
 lspcfg.arduino_language_server.setup { capabilities = capabilities }
 lspcfg.tsserver.setup { capabilities = capabilities }
