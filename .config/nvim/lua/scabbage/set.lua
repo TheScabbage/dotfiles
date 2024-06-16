@@ -1,5 +1,5 @@
 vim.o.guifont = "FiraCode\\ Nerd\\ Font\\ Mono:h16"
-vim.g.neovide_transparency = 0.2
+vim.g.neovide_transparency = 0.35
 vim.opt.termguicolors = true
 
 -- set listchars=tab:>-,space:•,trail:.

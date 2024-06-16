@@ -83,3 +83,8 @@ vim.keymap.set('n', '<leader>ind', 'gg=G<C-o>zz')
 
 -- toggle delay training
 vim.keymap.set('n', '<leader>dt', ':DelayTrainToggle<CR>');
+
+-- neovide transparency
+-- ("wallpaper hide/show")
+vim.keymap.set('n', '<leader>swp', ':let g:neovide_transparency = 0.35<CR>')
+vim.keymap.set('n', '<leader>hwp', ':let g:neovide_transparency = 0.9<CR>')
