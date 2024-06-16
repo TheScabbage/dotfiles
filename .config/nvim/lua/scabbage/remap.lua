@@ -13,7 +13,7 @@ vim.keymap.set("n", "<C-Down>", 'V"ayV"_d"ap')
 vim.keymap.set("i", "<C-Up>", '<Esc>V"ayV"_d<Up>"aPi')
 vim.keymap.set("i", "<C-Down>", '<Esc>V"ayV"_d"api')
 
-vim.keymap.set("v", "<C-Up>",   '"aygv"_d<Up>"aP`[V`]')
+vim.keymap.set("v", "<C-Up>", '"aygv"_d<Up>"aP`[V`]')
 vim.keymap.set("v", "<C-Down>", '"aygv"_d"ap`[V`]')
 
 -- make braces
@@ -45,12 +45,12 @@ vim.keymap.set("n", "<leader>/", "/\\c")
 vim.keymap.set("n", "<leader>lg", ':LazyGit<CR>');
 
 -- save my pinkies
-vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>',     { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>q', ':q',         { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>on', ':on<CR>',   { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>q', ':q', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>on', ':on<CR>', { noremap = true, silent = true })
 
 -- clear line
-vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>S',   { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>S', { noremap = true, silent = true })
 
 
 -- system clipboard
@@ -84,7 +84,30 @@ vim.keymap.set('n', '<leader>ind', 'gg=G<C-o>zz')
 -- toggle delay training
 vim.keymap.set('n', '<leader>dt', ':DelayTrainToggle<CR>');
 
--- neovide transparency
--- ("wallpaper hide/show")
-vim.keymap.set('n', '<leader>swp', ':let g:neovide_transparency = 0.35<CR>')
-vim.keymap.set('n', '<leader>hwp', ':let g:neovide_transparency = 0.9<CR>')
+-- smooth fade for neovide transparency
+local DELAY = 20
+local ITERATIONS = 50
+local OPACITY = 0.35
+
+local function showWallpaper()
+    local vl = vim.loop
+    for ii = 0, ITERATIONS do
+        vl.sleep(DELAY)
+        local progress = ii / ITERATIONS
+        vim.g.neovide_transparency = 1.0 - (progress * (1.0 - OPACITY))
+    end
+    vim.g.neovide_transparency = OPACITY
+end
+
+local function hideWallpaper()
+    local vl = vim.loop
+    for ii = 0, ITERATIONS do
+        vl.sleep(DELAY)
+        local progress = ii / ITERATIONS
+        vim.g.neovide_transparency = OPACITY + progress * (1.0 - OPACITY)
+    end
+    vim.g.neovide_transparency = 1.0
+end
+
+vim.keymap.set('n', '<leader>swp', showWallpaper, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>hwp', hideWallpaper, { noremap = true, silent = true })
