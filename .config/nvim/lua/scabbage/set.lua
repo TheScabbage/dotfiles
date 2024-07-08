@@ -2,6 +2,9 @@ vim.o.guifont = "FiraCode\\ Nerd\\ Font\\ Mono:h16"
 vim.g.neovide_transparency = 0.35
 vim.opt.termguicolors = true
 
+-- stop the # char from removing indentation
+vim.api.nvim_set_keymap('i', '#', 'X<C-h>#', {noremap = true})
+
 -- set listchars=tab:>-,space:•,trail:.
 vim.opt.listchars = {
     tab=">-",
