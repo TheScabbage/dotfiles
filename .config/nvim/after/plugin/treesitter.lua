@@ -9,7 +9,7 @@ vim.filetype.add({
 
 require 'nvim-treesitter.parsers'.get_parser_configs().shep = {
     install_info = {
-        url = "/home/scabbage/projects/tree-sitter-shep",
+        url = "/home/scabbage/projects/shep/tree-sitter-shep",
         files = {"src/parser.c"},
     },
     filetype = 'shep',
