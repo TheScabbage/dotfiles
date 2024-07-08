@@ -38,6 +38,11 @@ vim.api.nvim_set_keymap('n', '<leader>jt', [[<Cmd>normal! 'T<CR>]], { noremap = 
 vim.api.nvim_set_keymap('n', '<leader>jn', [[<Cmd>normal! 'N<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>js', [[<Cmd>normal! 'S<CR>]], { noremap = true })
 
+-- jump to line number
+vim.api.nvim_set_keymap('n', '<leader>jl', ':', { noremap = true })
+-- jump to byte offset in buffer
+vim.api.nvim_set_keymap('n', '<leader>jb', ':goto ', { noremap = true })
+
 -- case insensitive search
 vim.keymap.set("n", "<leader>/", "/\\c")
 
