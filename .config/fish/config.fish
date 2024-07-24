@@ -45,4 +45,9 @@ function fish_prompt -d "Writes out the CLI prompt"
     printf '%s%s%s@%s%s %s%s %s🢖 ' (set_color purple;) $USER (set_color blue) (set_color purple) $hostname (set_color green;) (prompt_pwd) (set_color normal)
 end
 
-zoxide init fish --cmd cd | source
+function vw
+    neovide . & 
+    sleep 0.1
+end
+
+zoxide init fish --cmd z | source
