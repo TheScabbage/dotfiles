@@ -90,9 +90,9 @@ vim.keymap.set('n', '<leader>ind', 'gg=G<C-o>zz')
 vim.keymap.set('n', '<leader>dt', ':DelayTrainToggle<CR>');
 
 -- smooth fade for neovide transparency
-local DELAY = 20
-local ITERATIONS = 50
-local OPACITY = 0.35
+local DELAY = 10
+local ITERATIONS = 20
+local OPACITY = 0.5
 
 local function showWallpaper()
     local vl = vim.loop
