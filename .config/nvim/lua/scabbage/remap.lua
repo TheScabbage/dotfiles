@@ -87,7 +87,7 @@ vim.keymap.set("n", "<leader>hl", ":Inspect<CR>")
 vim.keymap.set('n', '<leader>ind', 'gg=G<C-o>zz')
 
 -- toggle delay training
-vim.keymap.set('n', '<leader>dt', ':DelayTrainToggle<CR>');
+--vim.keymap.set('n', '<leader>dt', ':DelayTrainToggle<CR>');
 
 -- smooth fade for neovide transparency
 local DELAY = 10
