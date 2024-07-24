@@ -68,7 +68,6 @@ return packer.startup(function(use)
     use 'tpope/vim-surround'
 
     -- Git
-    use 'tpope/vim-fugitive'
     use 'junegunn/gv.vim'
 
     use 'ThePrimeagen/git-worktree.nvim'
