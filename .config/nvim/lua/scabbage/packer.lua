@@ -70,7 +70,6 @@ return packer.startup(function(use)
     -- Git
     use 'junegunn/gv.vim'
 
-    use 'ThePrimeagen/git-worktree.nvim'
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
