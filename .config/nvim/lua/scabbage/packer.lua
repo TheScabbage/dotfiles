@@ -96,12 +96,6 @@ return packer.startup(function(use)
         'simrat39/rust-tools.nvim',
     }
 
-    -- ew java
-    use 'mfussenegger/nvim-jdtls'
-
-    -- Origami that shit
-    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
-
     -- Completion
     use {
         'hrsh7th/nvim-cmp',
@@ -112,6 +106,14 @@ return packer.startup(function(use)
             'hrsh7th/cmp-cmdline'
         }
     }
+
+    -- ew java
+    --use 'mfussenegger/nvim-jdtls'
+
+    -- Origami that shit
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+
+
     use {
         'L3MON4D3/LuaSnip',
         tag = 'v2.*',
