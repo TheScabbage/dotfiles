@@ -46,3 +46,29 @@ vim.keymap.set('n', '<leader>ts', builtin.lsp_document_symbols, {})
 --vim.keymap.set('n', '<leader>th', function()
 --    builtin.grep_string({ search = vim.fn.input("Grep > ") });
 --end)
+
+local actions = require('telescope.actions')
+local action_state = require('telescope.actions.state')
+local oil = require('oil')
+
+local function jumpToDir(prompt_bufnr)
+    local selected_entry = action_state.get_selected_entry()
+    actions.close(prompt_bufnr)
+    oil.open(selected_entry[1])
+end
+
+function FuzzySearchDirs()
+    require('telescope.pickers').new({}, {
+        prompt_title = 'Fuzzy Search Directories',
+        finder = require('telescope.finders').new_oneshot_job({ 'find', '.', '-type', 'd' }),
+        sorter = require('telescope.config').values.generic_sorter({}),
+        attach_mappings = function(_, map)
+            map('i', '<CR>', jumpToDir)
+            map('n', '<CR>', jumpToDir)
+            return true
+        end,
+    }):find()
+end
+
+vim.api.nvim_set_keymap('n', '<leader>td', [[<Cmd>lua FuzzySearchDirs()<CR>]],
+    { noremap = true, silent = true })
