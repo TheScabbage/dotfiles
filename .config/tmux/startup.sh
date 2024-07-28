@@ -14,4 +14,4 @@ tmux new-window -t s -n "deej"
 tmux send-keys -t s:deej "z projects deej && ./deej-dev" C-m
 
 tmux select-window -t s:0
-tmux attach-session -t s
+# tmux attach-session -t s
