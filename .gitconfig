@@ -21,4 +21,4 @@
 [fetch]
 	writeCommitGraph = true
 [pull]
-	rebase = false
+	rebase = true
