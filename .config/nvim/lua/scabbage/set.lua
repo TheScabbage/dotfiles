@@ -1,5 +1,6 @@
 vim.o.guifont = "FiraCode\\ Nerd\\ Font\\ Mono:h16"
 vim.g.neovide_transparency = 0.6
+vim.g.neovide_hide_mouse_when_typing = true
 vim.opt.termguicolors = true
 
 -- stop the # char from removing indentation
