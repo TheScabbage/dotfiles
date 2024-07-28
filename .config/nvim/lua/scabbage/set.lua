@@ -49,3 +49,8 @@ vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
 vim.opt.clipboard = "unnamed"
 
 vim.opt.textwidth = 100;
+
+-- backups/swap clutter up file watchers, so yeet them
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
