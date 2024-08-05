@@ -43,10 +43,6 @@ vim.keymap.set('n', '<leader>tg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>tr', builtin.registers, {})
 vim.keymap.set('n', '<leader>ts', builtin.lsp_document_symbols, {})
 
---vim.keymap.set('n', '<leader>th', function()
---    builtin.grep_string({ search = vim.fn.input("Grep > ") });
---end)
-
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local oil = require('oil')
