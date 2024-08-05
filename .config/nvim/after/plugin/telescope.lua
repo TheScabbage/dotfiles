@@ -2,6 +2,11 @@ local telescope = require('telescope')
 
 telescope.setup {
     defaults = {
+        layout_config = {
+            width = 0.95,
+            height = 0.95,
+            preview_width = 80,
+        },
         file_ignore_patterns = {
             "%.meta",
             "%.prefab",
