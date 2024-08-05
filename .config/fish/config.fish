@@ -46,7 +46,7 @@ function fish_prompt -d "Writes out the CLI prompt"
 end
 
 function vw
-    neovide . & 
+    neovide . &
     sleep 0.1
 end
 
