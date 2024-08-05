@@ -22,3 +22,5 @@
 	writeCommitGraph = true
 [pull]
 	rebase = true
+[rebase]
+	autoStash = true
