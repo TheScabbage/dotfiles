@@ -36,6 +36,13 @@ return packer.startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         'nvim-telescope/telescope-ui-select.nvim',
 
+        use {
+          "TheScabbage/project.nvim",
+          config = function()
+                require("project_nvim").setup {
+            }
+          end
+        },
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 

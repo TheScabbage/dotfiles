@@ -31,6 +31,7 @@ telescope.setup {
 }
 
 telescope.load_extension("ui-select")
+require('telescope').load_extension('projects')
 
 local builtin = require('telescope.builtin')
 
@@ -42,6 +43,7 @@ vim.keymap.set('n', '<leader>te', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>tg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>tr', builtin.registers, {})
 vim.keymap.set('n', '<leader>ts', builtin.lsp_document_symbols, {})
+vim.keymap.set('n', '<leader>tp', ":lua require'telescope'.extensions.projects.projects{}<CR>")
 vim.keymap.set('n', '<leader>td', ":lua FuzzySearchDirs()<CR>", { noremap = true, silent = true })
 
 local actions = require('telescope.actions')
