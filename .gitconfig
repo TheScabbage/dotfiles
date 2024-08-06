@@ -8,6 +8,7 @@
 	required = true
 [init]
 	defaultBranch = master
+	templateDir = ~/.git-templates
 [core]
 	editor = nvim
 [column]
