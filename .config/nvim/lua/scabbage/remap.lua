@@ -53,6 +53,7 @@ vim.keymap.set("n", "<leader>lg", ':LazyGit<CR>');
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>q', ':q', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>on', ':on<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bd', ':bdelete<CR>', { noremap = true })
 
 -- clear line
 vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>S', { noremap = true, silent = true })
