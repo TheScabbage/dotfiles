@@ -47,12 +47,15 @@ return packer.startup(function(use)
     }
 
     -- Frecency
-    use {
-        'nvim-telescope/telescope-frecency.nvim',
-        config = function()
-            require('telescope').load_extension 'frecency'
-        end,
-    }
+    -- Throws errors on init and plenary complains about vimscript in lua callbacks;
+    -- Disabled until fixed
+    --use {
+    --    --'~/projects/telescope-frecency.nvim',
+    --    'nvim-telescope/telescope-frecency.nvim',
+    --    config = function()
+    --        require('telescope').load_extension 'frecency'
+    --    end,
+    --}
 
     -- Syntax highlighting
     use {

@@ -42,7 +42,11 @@ local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>th', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>tf', builtin.find_files, {})
-vim.keymap.set('n', '<leader>tt', '<Cmd>Telescope frecency workspace=CWD<CR>')
+
+-- Frecency is borked; fallback on the builtin file finder
+--vim.keymap.set('n', '<leader>tt', function() require('telescope').extensions.frecency.frecency({ workspace = 'CWD' }) end)
+vim.keymap.set('n', '<leader>tt', builtin.find_files, {})
+
 vim.keymap.set('n', '<leader>tb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>te', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>tg', builtin.live_grep, {})
