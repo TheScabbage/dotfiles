@@ -69,7 +69,7 @@ function DirPicker()
     require('telescope.pickers').new({}, {
         prompt_title = 'Fuzzy Search Directories',
         finder = DirFinder({}),
-
+        previewer = require("telescope.previewers").vim_buffer_qflist.new({}),
         sorter = require('telescope.config').values.generic_sorter({}),
         attach_mappings = function(_, map)
             map('i', '<CR>', jumpToDir)
