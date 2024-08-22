@@ -11,6 +11,7 @@
 	templateDir = ~/.git-templates
 [core]
 	editor = nvim
+	hooksPath = /home/scabbage/.config/git/hooks/
 [column]
 	ui = auto
 [branch]
