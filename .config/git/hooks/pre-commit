@@ -8,7 +8,7 @@ ALT_TRIGGER="auto"
 ALT_TRIGGER+="fix"
 
 # Check for trigger word in staged changes
-if git diff --cached | grep "\+" | grep -q -i "${TRIGGER_WORD}\|${ALT_TRIGGER}"; then
+if git diff --cached | grep '^+' | grep -q -i "${TRIGGER_WORD}\|${ALT_TRIGGER}"; then
     echo "Commit rejected: '${TRIGGER_WORD}'|'${ALT_TRIGGER}' found in staged changes."
     exit 1
 fi
