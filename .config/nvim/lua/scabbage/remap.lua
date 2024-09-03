@@ -43,9 +43,6 @@ vim.api.nvim_set_keymap('n', '<leader>jl', ':', { noremap = true })
 -- jump to byte offset in buffer
 vim.api.nvim_set_keymap('n', '<leader>jb', ':goto ', { noremap = true })
 
--- case insensitive search
-vim.keymap.set("n", "<leader>/", "/\\c")
-
 -- git
 vim.keymap.set("n", "<leader>lg", ':LazyGit<CR>');
 
