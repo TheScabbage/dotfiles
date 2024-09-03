@@ -41,12 +41,14 @@ ll.setup {
   extensions = {}
 }
 
-function Colorify(color)
+function Colorify(color, overwrite_background)
   color = color or "evergarden"
   vim.cmd.colorscheme(color)
 
-  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  if overwrite_background then
+    vim.api.nvim_set_hl(0, "Normal", { bg = "#090108" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  end
 
   -- Change comment color to red
   vim.cmd('highlight Comment guifg=#bb4033')
@@ -62,4 +64,4 @@ function Colorify(color)
   vim.cmd("call lengthmatters#highlight('guibg=#440000')")
 end
 
-Colorify()
+Colorify(nil, true)
