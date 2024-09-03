@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 
+-- ez terminal exit
+vim.keymap.set("t", "<C-ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
+
 -- project files
 vim.keymap.set("n", "<leader>pf", ":Oil<CR>")
 
