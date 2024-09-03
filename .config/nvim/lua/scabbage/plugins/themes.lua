@@ -8,6 +8,9 @@ return {
             vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
         end
     },
+    'AlexvZyl/nordic.nvim',
+    'ribru17/bamboo.nvim',
+    'romainl/Apprentice',
     'bluz71/vim-nightfly-colors',
     'jacoborus/tender.vim',
     'Mofiqul/vscode.nvim',
