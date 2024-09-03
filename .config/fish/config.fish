@@ -31,6 +31,15 @@ function rnd_greeting
         (printf '%s hospitals DDoSed.' (random 10 256))
 end
 
+function yy
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
 if status is-interactive
     echo -e "\e[38;5;69m$time"
     
