@@ -3,6 +3,12 @@ vim.g.mapleader = " "
 -- ez terminal exit
 vim.keymap.set("t", "<C-ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
 
+-- open new right side terminal
+vim.keymap.set("n", "<leader>nt", ":vs<CR><C-w>w15<C-w><:term<CR>")
+
+vim.keymap.set("n", "<leader><Right>", "5<C-w>>")
+vim.keymap.set("n", "<leader><Left>",  "5<C-w><")
+
 -- project files
 vim.keymap.set("n", "<leader>pf", ":Oil<CR>")
 
