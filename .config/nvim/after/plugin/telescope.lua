@@ -41,11 +41,10 @@ require('telescope').load_extension('projects')
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>th', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>tf', builtin.find_files, {})
 
+vim.keymap.set('n', '<leader>tf', builtin.find_files, {})
 -- Frecency is borked; fallback on the builtin file finder
---vim.keymap.set('n', '<leader>tt', function() require('telescope').extensions.frecency.frecency({ workspace = 'CWD' }) end)
-vim.keymap.set('n', '<leader>tt', builtin.find_files, {})
+--vim.keymap.set('n', '<leader>tf', function() require('telescope').extensions.frecency.frecency({ workspace = 'CWD' }) end)
 
 vim.keymap.set('n', '<leader>tb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>te', builtin.diagnostics, {})
@@ -59,6 +58,9 @@ local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local oil = require('oil')
 
+
+
+-- Directory picker (opens in Oil)
 local function jumpToDir(prompt_bufnr)
     local selected_entry = action_state.get_selected_entry()
     actions.close(prompt_bufnr)
