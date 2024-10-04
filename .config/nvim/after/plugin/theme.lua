@@ -42,11 +42,29 @@ ll.setup {
 }
 
 function Colorify(color, overwrite_background)
-  color = color or "evergarden"
+  local defaultColor = 'evergarden'
+  local defaultBg = '#090108'
+  local ft = vim.bo.filetype
+
+  if ft == 'cs' then
+    defaultColor = 'vscode'
+    defaultBg = '#070210'
+  elseif ft == 'go' then
+    defaultColor = 'kanagawa'
+    defaultBg = '#10292d'
+  elseif ft == 'zig' then
+    defaultColor = 'evergarden'
+    defaultBg = '#150508'
+  elseif ft == 'lua' then
+    defaultColor = 'habamax'
+    defaultBg = '#151515'
+  end
+
+  color = color or defaultColor
   vim.cmd.colorscheme(color)
 
   if overwrite_background then
-    vim.api.nvim_set_hl(0, "Normal", { bg = "#090108" })
+    vim.api.nvim_set_hl(0, "Normal", { bg = defaultBg })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
   end
 
@@ -65,3 +83,13 @@ function Colorify(color, overwrite_background)
 end
 
 Colorify(nil, true)
+
+local color_group = vim.api.nvim_create_augroup('Colourify', {clear = true})
+vim.api.nvim_create_autocmd('BufEnter', {
+  group = color_group,
+  pattern = '*',
+  callback = function ()
+    Colorify(nil, true)
+  end
+
+});
