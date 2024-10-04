@@ -51,7 +51,7 @@ if status is-interactive
 end
 
 function fish_prompt -d "Writes out the CLI prompt"
-    printf '%s%s%s@%s%s %s%s %s🢖 ' (set_color purple;) $USER (set_color blue) (set_color purple) $hostname (set_color green;) (prompt_pwd) (set_color normal)
+    printf '%s%s%s@%s%s %s%s %s🢖 ' (set_color "896FA7") $USER (set_color blue) (set_color "8E58AF") $hostname (set_color green;) (prompt_pwd) (set_color normal)
 end
 
 function vw
