@@ -47,17 +47,20 @@ vim.keymap.set('n', '<leader>tf', builtin.find_files, {})
 --vim.keymap.set('n', '<leader>tf', function() require('telescope').extensions.frecency.frecency({ workspace = 'CWD' }) end)
 
 vim.keymap.set('n', '<leader>tb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>tm', builtin.marks, {})
 vim.keymap.set('n', '<leader>te', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>tg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>tr', builtin.registers, {})
+vim.keymap.set('n', '<leader>tq', builtin.quickfix, {})
 vim.keymap.set('n', '<leader>ts', builtin.lsp_document_symbols, {})
+vim.keymap.set('n', '<leader>tk', builtin.keymaps, {})
+vim.keymap.set('n', '<leader>th', builtin.highlights, {})
 vim.keymap.set('n', '<leader>tp', ":lua require'telescope'.extensions.projects.projects{}<CR>")
 vim.keymap.set('n', '<leader>td', ":lua DirPicker()<CR>", { noremap = true, silent = true })
 
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local oil = require('oil')
-
 
 
 -- Directory picker (opens in Oil)
