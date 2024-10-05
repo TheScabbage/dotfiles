@@ -30,6 +30,7 @@ vim.keymap.set("v", "<C-Down>", '"aygv"_d"ap`[V`]')
 -- snippets
 vim.api.nvim_set_keymap('n', '<leader>sb', 'A{<CR>}<ESC>O', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>sp', 'A()<Left>',   { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>sfp", 'a"", .{}<ESC>5<left>i', { noremap = true, silent = true});
 
 -- make stringy boi
 vim.keymap.set("n", "<leader>str", 'a""<Left>')
