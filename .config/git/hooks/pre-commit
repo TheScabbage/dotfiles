@@ -2,14 +2,20 @@
 
 # Concat the trigger together to make it easier to
 # track this script itself
-TRIGGER_WORD="no"
-TRIGGER_WORD+="checkin"
-ALT_TRIGGER="auto"
-ALT_TRIGGER+="fix"
+TRIG0="no"
+TRIG0+="checkin"
 
-# Check for trigger word in staged changes
-if git diff --cached | grep '^+' | grep -q -i "${TRIGGER_WORD}\|${ALT_TRIGGER}"; then
-    echo "Commit rejected: '${TRIGGER_WORD}'|'${ALT_TRIGGER}' found in staged changes."
+TRIG1="auto"
+TRIG1+="fix"
+
+# Check for trigger words in staged changes
+if git diff --cached | grep '^+' | grep -q -i "${TRIG0}"; then
+    echo "Commit rejected: '${TRIG0}' found in staged changes."
+    exit 1
+fi
+
+if git diff --cached | grep '^+' | grep -q -i "${TRIG1}"; then
+    echo "Commit rejected: '${TRIG1}' found in staged changes."
     exit 1
 fi
 
