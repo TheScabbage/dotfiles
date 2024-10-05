@@ -8,6 +8,8 @@ vim.keymap.set("n", "<leader>nt", ":vs<CR><C-w>w15<C-w><:term<CR>")
 
 vim.keymap.set("n", "<leader><Right>", "5<C-w>>")
 vim.keymap.set("n", "<leader><Left>",  "5<C-w><")
+vim.keymap.set("n", "<leader><Up>", "5<C-w>+")
+vim.keymap.set("n", "<leader><Down>",  "5<C-w>-")
 
 -- project files
 vim.keymap.set("n", "<leader>pf", ":Oil<CR>")
