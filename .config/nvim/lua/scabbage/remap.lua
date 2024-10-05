@@ -93,6 +93,11 @@ vim.keymap.set("n", "<leader>hl", ":Inspect<CR>")
 -- autoindent entire file
 vim.keymap.set('n', '<leader>ind', 'gg=G<C-o>zz')
 
+-- Compile mode
+vim.keymap.set('n', '<leader>cmp', ':Compile<CR>');
+vim.keymap.set('n', '<leader>cn', ':NextError<CR>');
+vim.keymap.set('n', '<leader>cp', ':PrevError<CR>');
+
 -- toggle delay training
 --vim.keymap.set('n', '<leader>dt', ':DelayTrainToggle<CR>');
 
