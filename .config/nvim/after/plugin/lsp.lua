@@ -30,7 +30,7 @@ require('mason-lspconfig').setup {
         "arduino_language_server",
         "gopls",
         "zls",
-        "tsserver",
+        "ts_ls",
     }
 }
 
@@ -103,7 +103,7 @@ lspcfg.zls.setup { capabilities = capabilities }
 lspcfg.rust_analyzer.setup { capabilities = capabilities }
 lspcfg.gopls.setup { capabilities = capabilities }
 lspcfg.arduino_language_server.setup { capabilities = capabilities }
-lspcfg.tsserver.setup { capabilities = capabilities }
+lspcfg.ts_ls.setup { capabilities = capabilities }
 lspcfg.jdtls.setup { capabilities = capabilities }
 lspcfg.lua_ls.setup { capabilities = capabilities,
     settings = {
