@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)               -- rename
 
         vim.keymap.set('n', '<leader>fmt', vim.lsp.buf.format, opts)              -- format
-        vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, opts)           -- go definition
+        vim.keymap.set('n', '<leader>gt', vim.lsp.buf.definition, opts)           -- go to
         vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts)       -- go implementation
         vim.keymap.set('n', '<leader>ref', vim.lsp.buf.references, opts)          -- references
         vim.keymap.set('n', '<leader>sca', vim.lsp.buf.code_action, opts)         -- show code actions
