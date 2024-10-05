@@ -31,6 +31,7 @@ require('mason-lspconfig').setup {
         "gopls",
         "zls",
         "ts_ls",
+        "clangd",
     }
 }
 
