@@ -27,11 +27,9 @@ vim.keymap.set("i", "<C-Down>", '<Esc>V"ayV"_d"api')
 vim.keymap.set("v", "<C-Up>", '"aygv"_d<Up>"aP`[V`]')
 vim.keymap.set("v", "<C-Down>", '"aygv"_d"ap`[V`]')
 
--- make braces
-vim.keymap.set("n", "<leader>bc", 'a()<Left>')
-
--- squirly brace
+-- snippets
 vim.api.nvim_set_keymap('n', '<leader>sb', 'A{<CR>}<ESC>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>sp', 'A()<Left>',   { noremap = true, silent = true })
 
 -- make stringy boi
 vim.keymap.set("n", "<leader>str", 'a""<Left>')
