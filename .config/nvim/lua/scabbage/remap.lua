@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader><Up>", "5<C-w>+")
 vim.keymap.set("n", "<leader><Down>",  "5<C-w>-")
 
 -- project files
-vim.keymap.set("n", "<leader>pf", ":Oil<CR>")
+vim.keymap.set("n", "<leader>pf", ":Oil<CR>:lua Colorify(nil, true)<CR>")
 
 -- convert line endings to unix
 vim.keymap.set("n", "<leader>leu", function() vim.cmd('set ff=unix') end)
