@@ -81,6 +81,10 @@ function Colorify(color, overwrite_background)
   -- Make matching parens less noisy
   vim.cmd('highlight MatchParen guibg=#303030 guifg=#777777')
 
+  -- Diagnostic hint underlines should be more aggressive
+  vim.cmd("highlight DiagnosticUnderlineHint guisp=#cf9417")
+  vim.cmd("highlight DiagnosticHint guifg=#cf9417")
+
   -- Set background colour of long lines to dark red
   vim.cmd("call lengthmatters#highlight('guibg=#440000')")
 end
