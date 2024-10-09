@@ -96,6 +96,11 @@ vim.api.nvim_create_autocmd('BufEnter', {
   group = color_group,
   pattern = '*',
   callback = function ()
+    local ft = vim.bo.filetype
+    if ft == 'oil' then
+      -- Running the color function from an autocmd borks oil colours
+      return
+    end
     Colorify(nil, true)
   end
 
