@@ -59,7 +59,7 @@ function Colorify(color, overwrite_background)
     defaultColor = 'habamax'
     defaultBg = '#151515'
   elseif ft == 'oil' then
-    defaultColor = 'gruvbox'
+    defaultColor = 'apprentice'
     defaultBg = '#151515'
   end
 
