@@ -25,12 +25,12 @@ telescope.setup {
             '--ignore-file',
             '.gitignore'
         },
-        extensions = {
-            ["ui-select"] = {
-                require('telescope.themes').get_dropdown {
-
-                }
-            }
+    },
+    extensions = {
+        projects = {
+            on_project_selected = function()
+                print("Project selected")
+            end
         }
     }
 }
