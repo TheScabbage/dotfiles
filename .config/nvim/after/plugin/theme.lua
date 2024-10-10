@@ -101,6 +101,11 @@ vim.api.nvim_create_autocmd('BufEnter', {
       -- Running the color function from an autocmd borks oil colours
       return
     end
+
+    if ft == 'qf' then
+      -- Don't colorise quickfix windows as they are used across languages
+      return
+    end
     Colorify(nil, true)
   end
 
