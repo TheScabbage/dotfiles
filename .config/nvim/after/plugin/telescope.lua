@@ -54,13 +54,22 @@ vim.keymap.set('n', '<leader>tr', builtin.registers, {})
 vim.keymap.set('n', '<leader>tq', builtin.quickfix, {})
 vim.keymap.set('n', '<leader>ts', builtin.lsp_document_symbols, {})
 vim.keymap.set('n', '<leader>tk', builtin.keymaps, {})
-vim.keymap.set('n', '<leader>tp', ":lua require'telescope'.extensions.projects.projects{}<CR>")
 vim.keymap.set('n', '<leader>tc', builtin.highlights, {})
+vim.keymap.set('n', '<leader>tp', ":lua SelectProject()<CR>")
 vim.keymap.set('n', '<leader>td', ":lua DirPicker()<CR>", { noremap = true, silent = true })
 
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local oil = require('oil')
+
+function SelectProject()
+    local opts = {
+        on_selected = function()
+            Colorify(nil, true)
+        end,
+    }
+    require'telescope'.extensions.projects.projects(opts)
+end
 
 
 -- Directory picker (opens in Oil)
@@ -122,7 +131,6 @@ function DirFinder(opts)
     }, {
         __call = function(_, prompt, process_result, process_complete)
             if not job_started then
-
                 stdout = LinesPipe()
                 job = async_job.spawn {
                     command = search_script,
