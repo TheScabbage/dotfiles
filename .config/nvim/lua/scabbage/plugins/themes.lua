@@ -3,7 +3,7 @@ return {
         'TheScabbage/evergarden',
         lazy = false,
         priority = 1000,
-        config = function (_)
+        config = function(_)
             vim.cmd [[colorscheme evergarden]]
             vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
         end
@@ -18,4 +18,5 @@ return {
     'fcpg/vim-farout',
     'w0ng/vim-hybrid',
     'morhetz/gruvbox',
+    { 'rose-pine/neovim', name = 'rose-pine' },
 }
