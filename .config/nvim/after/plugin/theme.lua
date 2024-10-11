@@ -61,6 +61,9 @@ function Colorify(color, overwrite_background)
   elseif ft == 'oil' then
     defaultColor = 'apprentice'
     defaultBg = '#151515'
+  elseif ft == 'rust' then
+    defaultColor = 'bamboo'
+    defaultBg = '#160303'
   end
 
   color = color or defaultColor
