@@ -66,6 +66,10 @@ function Colorify(color, overwrite_background)
     defaultBg = '#160303'
   end
 
+  if defaultColor == 'catppuccin-mocha' then
+    defaultBg = '#04130e'
+  end
+
   color = color or defaultColor
   vim.cmd.colorscheme(color)
 
@@ -82,7 +86,7 @@ function Colorify(color, overwrite_background)
   vim.cmd('highlight Whitespace guifg=#302922')
 
   -- Make matching parens less noisy
-  vim.cmd('highlight MatchParen guibg=#303030 guifg=#777777')
+  vim.cmd('highlight MatchParen guibg=#444444 guifg=#aaaaaa')
 
   -- Diagnostic hint underlines should be more aggressive
   vim.cmd("highlight DiagnosticUnderlineHint guisp=#cf9417")
@@ -94,11 +98,11 @@ end
 
 Colorify(nil, true)
 
-local color_group = vim.api.nvim_create_augroup('Colourify', {clear = true})
+local color_group = vim.api.nvim_create_augroup('Colourify', { clear = true })
 vim.api.nvim_create_autocmd('BufEnter', {
   group = color_group,
   pattern = '*',
-  callback = function ()
+  callback = function()
     local ft = vim.bo.filetype
     if ft == 'oil' then
       -- Running the color function from an autocmd borks oil colours

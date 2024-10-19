@@ -11,6 +11,7 @@ return {
     'AlexvZyl/nordic.nvim',
     'ribru17/bamboo.nvim',
     'romainl/Apprentice',
+    {'catppuccin/nvim', name = 'catppuccin'},
     'bluz71/vim-nightfly-colors',
     'jacoborus/tender.vim',
     'Mofiqul/vscode.nvim',
