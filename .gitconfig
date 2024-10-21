@@ -1,6 +1,7 @@
 [user]
 	name = scabbage
 	email = thescabbage@gmail.com
+	signingkey = /home/scabbage/.ssh/signing.pub
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -26,3 +27,9 @@
 	rebase = true
 [rebase]
 	autostash = false
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /home/scabbage/.ssh/allowed_signers
+[commit]
+	gpgsign = true
