@@ -25,4 +25,4 @@
 [pull]
 	rebase = true
 [rebase]
-	autoStash = true
+	autostash = false
