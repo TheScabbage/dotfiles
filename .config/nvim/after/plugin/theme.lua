@@ -94,6 +94,12 @@ function Colorify(color, overwrite_background)
 
   -- Set background colour of long lines to dark red
   vim.cmd("call lengthmatters#highlight('guibg=#440000')")
+
+  if ft == 'cs' then
+    -- Distinguish value/ref/interface types in csharp
+    vim.cmd('highlight @lsp.type.struct.cs guifg=#61E88A')
+    vim.cmd('highlight @lsp.type.interface.cs guifg=#F2C746')
+  end
 end
 
 Colorify(nil, true)
