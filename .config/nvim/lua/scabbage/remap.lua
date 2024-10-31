@@ -33,13 +33,14 @@ vim.keymap.set("n", "<leader>sfp", 'a"", .{}<ESC>5<left>i',
 vim.keymap.set("n", "<leader>str", 'a""<Left>', { desc = 'Make string' })
 vim.keymap.set("n", "<leader>ss", 'a" +<CR>"', { desc = 'String split (multiline)' })
 
-vim.api.nvim_set_keymap('n', '<leader>jh', [[<Cmd>normal! 'H<CR>]], { noremap = true, desc = 'Jump to global mark H' })
-vim.api.nvim_set_keymap('n', '<leader>jt', [[<Cmd>normal! 'T<CR>]], { noremap = true, desc = 'Jump to global mark T' })
-vim.api.nvim_set_keymap('n', '<leader>jn', [[<Cmd>normal! 'N<CR>]], { noremap = true, desc = 'Jump to global mark N' })
-vim.api.nvim_set_keymap('n', '<leader>js', [[<Cmd>normal! 'S<CR>]], { noremap = true, desc = 'Jump to global mark S' })
+-- Harpoon-style homerow jumps using global marks
+vim.api.nvim_set_keymap('n', '<C-h>', [[<Cmd>normal! 'H<CR>]], { noremap = true, desc = 'Jump to global mark H' })
+vim.api.nvim_set_keymap('n', '<C-t>', [[<Cmd>normal! 'T<CR>]], { noremap = true, desc = 'Jump to global mark T' })
+vim.api.nvim_set_keymap('n', '<C-n>', [[<Cmd>normal! 'N<CR>]], { noremap = true, desc = 'Jump to global mark N' })
+vim.api.nvim_set_keymap('n', '<C-s>', [[<Cmd>normal! 'S<CR>]], { noremap = true, desc = 'Jump to global mark S' })
 
-vim.keymap.set('n', '<C-n>', ':cnext<CR>', { desc = 'Go to next item in quickfix list' });
-vim.keymap.set('n', '<C-p>', ':cprev<CR>', { desc = 'Go to prev item in quickfix list' });
+vim.keymap.set('n', '<M-n>', ':cnext<CR>', { desc = 'Go to next item in quickfix list' });
+vim.keymap.set('n', '<M-p>', ':cprev<CR>', { desc = 'Go to prev item in quickfix list' });
 
 vim.api.nvim_set_keymap('n', '<leader>jb', ':goto ', { noremap = true, desc = 'Jump to byte' })
 
